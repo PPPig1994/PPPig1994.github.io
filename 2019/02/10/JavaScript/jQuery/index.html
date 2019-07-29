@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Jquery | PPPig1994</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Jquery,">
+  
+
+  <meta name="description" content="1 Jquery之helloworld  &amp;lt;!-- 导入jquery库 --&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;jquery-3.1.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;script type=&amp;qu">
+<meta name="keywords" content="Jquery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jquery">
+<meta property="og:url" content="https://pppig1994.github.io/2019/02/10/JavaScript/jQuery/index.html">
+<meta property="og:site_name" content="PPPig1994">
+<meta property="og:description" content="1 Jquery之helloworld  &amp;lt;!-- 导入jquery库 --&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;jquery-3.1.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;script type=&amp;qu">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-29T02:40:45.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jquery">
+<meta name="twitter:description" content="1 Jquery之helloworld  &amp;lt;!-- 导入jquery库 --&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;jquery-3.1.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;script type=&amp;qu">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-38189205-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+</head>
+</html>
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="https://valeriehu1995.github.io/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Jquery之helloworld"><span class="toc-text">1 Jquery之helloworld</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#选择器"><span class="toc-text">选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-基本选择器"><span class="toc-text">2.1    基本选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-层次选择器"><span class="toc-text">2.2    层次选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-基本过滤选择器"><span class="toc-text">2.3    基本过滤选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-内容过滤选择器"><span class="toc-text">2.4    内容过滤选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-可见性过滤选择器"><span class="toc-text">2.5    可见性过滤选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-属性过滤选择器"><span class="toc-text">2.6    属性过滤选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-子元素过滤选择器"><span class="toc-text">2.7    子元素过滤选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-表单对象过滤选择器"><span class="toc-text">2.8    表单对象过滤选择器</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-JavaScript/jQuery" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Jquery</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.02.10</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>PPPig</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Javasript/">Javasript</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="1-Jquery之helloworld"><a href="#1-Jquery之helloworld" class="headerlink" title="1 Jquery之helloworld"></a>1 Jquery之helloworld</h1><pre><code>  &lt;!-- 导入jquery库 --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    //$(function(){})相当于window.onload,代码写在{}之间
+    $(function() {
+        //1.选取button：$(&quot;button&quot;)
+        //2.为button添加onclick响应函数：$(&quot;button&quot;).onclick(function(){})
+        //代码写在function的{}中
+        $(&quot;button&quot;).click(function() {
+
+            alert(&quot;helloworld&quot;);
+            alert(this.firstChild.nodeValue);
+            alert($(this).text());
+            //jquery和DOM对象
+            //1.有jquery对象转为DOM对象
+            //1).获取一个jquery对象
+            var $btn = $(&quot;button&quot;);
+
+            //2).jQuery对象是一个数组
+            alert($btn.length);
+            //3).可以通过数组的下标转为DOM对象
+            alert($btn[0].firstChild.nodeValue);
+            //2.由DOM对象转为jQuery对象
+            //1).选取一个DOM对象
+            var btn = document.getElementById(&quot;btn&quot;);
+            //2).把DOM对象转为一个jQuery对象：使用$()进行包装
+            alert(&quot;--&quot; + $(btn).text());
+        });
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;button id=&quot;btn&quot;&gt; 按钮&lt;/button&gt;
+&lt;/body&gt;</code></pre><h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><h2 id="2-1-基本选择器"><a href="#2-1-基本选择器" class="headerlink" title="2.1    基本选择器"></a>2.1    基本选择器</h2><pre><code>&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+    .one {
+        width: 120px;
+        height: 120px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 5px;
+        float: left;
+    }
+
+    .mini {
+        width: 50px;
+        height: 50px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 3px;
+        font-size: 10px;
+        float: left;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    $(function() {
+        $(&quot;#btn1&quot;).click(function() {
+            //alert(&quot;nihao&quot;);
+            $(&quot;#one&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn2&quot;).click(function() {
+
+            $(&quot;.mini&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+        $(&quot;#btn3&quot;).click(function() {
+
+            $(&quot;div&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn4&quot;).click(function() {
+
+            $(&quot;*&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn5&quot;).click(function() {
+
+            $(&quot;span&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+            $(&quot;#two&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;选择id为one的元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn2&quot; value=&quot;选择class为mini的元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn3&quot; value=&quot;选择元素是div的元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn4&quot; value=&quot;选择所有的元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn5&quot; value=&quot;选择所有的span元素和id为two的元素&quot;&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div id=&quot;one&quot; class=&quot;one&quot;&gt;id为one,class为one的div
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;two&quot; class=&quot;one&quot; title=&quot;test&quot;&gt;id为two,class为one,title为test的div
+    &lt;div class=&quot;mini&quot; title=&quot;other&quot;&gt;class为mini,title为other&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&quot;three&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;forth&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;five&quot; class=&quot;one&quot; type=&quot;hidden&quot;&gt;包含input的type为hidden的div
+
+&lt;/div&gt;
+&lt;span id=&quot;six&quot; class=&quot;one&quot;&gt;^^span元素^^
+
+    &lt;/span&gt;
+&lt;/body&gt;</code></pre><h2 id="2-2-层次选择器"><a href="#2-2-层次选择器" class="headerlink" title="2.2    层次选择器"></a>2.2    层次选择器</h2><pre><code>&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+    .one {
+        width: 120px;
+        height: 120px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 5px;
+        float: left;
+    }
+
+    .mini {
+        width: 50px;
+        height: 50px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 3px;
+        font-size: 10px;
+        float: left;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    $(function() {
+        $(&quot;#btn1&quot;).click(function() {
+            /* 选择body内的所有div元素 */
+            $(&quot;body div&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn2&quot;).click(function() {
+            /* 在body内，选择子元素是div的 */
+            $(&quot;body &gt;div&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+        $(&quot;#btn3&quot;).click(function() {
+            /*  选择id为one的下一个div的元素 ,即兄弟*/
+            $(&quot;#one+div&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn4&quot;).click(function() {
+            /* 选择id为two的元素后面的所有的div兄弟元素,即兄弟 */
+            $(&quot;#two ~div&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn5&quot;).click(function() {
+            /* 选择id为two的元素所有div兄弟元素 */
+            $(&quot;#two&quot;).siblings(&quot;div&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+        $(&quot;#btn6&quot;).click(function() {
+            /* 选择id为one的下一个span元素,以下选择器选择的是紧邻one的span元素，若该
+            span和#one不相邻，选择器无效 */
+            //$(&quot;#one +span&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+            $(&quot;#one&quot;).nextAll(&quot;span:first&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn7&quot;).click(function() {
+            /* 选择id为two的元素前边的所有div兄弟元素 */
+            $(&quot;#two&quot;).prevAll(&quot;div&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;选择body内的所有div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn2&quot; value=&quot;在body内，选择子元素是div的&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn3&quot; value=&quot;选择id为one的下一个div的元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn4&quot; value=&quot;选择id为two的元素后面的所有的div兄弟元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn5&quot; value=&quot;选择id为two的元素所有div兄弟元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn6&quot; value=&quot;选择id为one的下一个span元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn7&quot; value=&quot;选择id为two的元素前边的所有div兄弟元素&quot;&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div id=&quot;one&quot; class=&quot;one&quot;&gt;id为one,class为one的div
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;two&quot; class=&quot;one&quot; title=&quot;test&quot;&gt;id为two,class为one,title为test的div
+    &lt;div class=&quot;mini&quot; title=&quot;other&quot;&gt;class为mini,title为other&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&quot;three&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;forth&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;five&quot; class=&quot;one&quot; type=&quot;hidden&quot;&gt;包含input的type为hidden的div
+
+&lt;/div&gt;
+&lt;span id=&quot;six&quot; class=&quot;one&quot;&gt;^^span元素^^
+
+&lt;/span&gt;
+&lt;span id=&quot;seven&quot; class=&quot;one&quot;&gt;--span元素--
+
+&lt;/span&gt;
+&lt;/body&gt;</code></pre><h2 id="2-3-基本过滤选择器"><a href="#2-3-基本过滤选择器" class="headerlink" title="2.3    基本过滤选择器"></a>2.3    基本过滤选择器</h2><pre><code>&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+    .one {
+        width: 120px;
+        height: 120px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 5px;
+        float: left;
+    }
+
+    .mini {
+        width: 50px;
+        height: 50px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 3px;
+        font-size: 10px;
+        float: left;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    $(document).ready(function() {
+
+        function anmateIt() {
+            $(&quot;#mover&quot;).slideToggle(&quot;slow&quot;, anmateIt);
+        }
+        anmateIt();
+        $(&quot;#btn1&quot;).click(function() {
+            /* 选择第一个div元素 */
+            $(&quot;div:first&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn2&quot;).click(function() {
+            /* 选择最后一个div元素 */
+            $(&quot;div:last&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+        $(&quot;#btn3&quot;).click(function() {
+            /*  选择class不为one的所有元素*/
+            $(&quot;div:not(.one)&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn4&quot;).click(function() {
+            /* 选择索引值为偶数的div元素 ，索引是从0开始的*/
+            $(&quot;div:even&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn5&quot;).click(function() {
+            /* 选择索引值为奇数的div元素 */
+            $(&quot;div:odd&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+        $(&quot;#btn6&quot;).click(function() {
+            /* 选择索引值大于3的div元素 */
+
+            $(&quot;div:gt(3)&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn7&quot;).click(function() {
+            /* 选择索引值为等于3的div元素 */
+            $(&quot;div:eq(3)&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+
+        $(&quot;#btn8&quot;).click(function() {
+            /* 选怎索引值小于3的div元素 */
+            $(&quot;div:lt(3)&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+        $(&quot;#btn9&quot;).click(function() {
+            /* 选择所有的标题元素 */
+
+            $(&quot;:header&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn10&quot;).click(function() {
+            /* 选择正在执行动画的所有元素 */
+            $(&quot;:animated&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+        $(&quot;#btn11&quot;).click(function() {
+            /* 选择id为two的下一个span元素 */
+            $(&quot;#two&quot;).nextAll(&quot;span:first&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;选择第一个div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn2&quot; value=&quot;选择最后一个div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn3&quot; value=&quot;选择class不为one的所有元素&quot;&gt;
+
+&lt;input type=&quot;button&quot; id=&quot;btn4&quot; value=&quot;选择索引值为偶数的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn5&quot; value=&quot;选择索引值为奇数的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn6&quot; value=&quot;选择索引值大于3的div元素&quot;&gt;
+
+&lt;input type=&quot;button&quot; id=&quot;btn7&quot; value=&quot;选择索引值为等于3的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn8&quot; value=&quot;选怎索引值小于3的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn9&quot; value=&quot;选择所有的标题元素&quot;&gt;
+
+&lt;input type=&quot;button&quot; id=&quot;btn10&quot; value=&quot;选择正在执行动画的所有元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn11&quot; value=&quot;选择id为two的下一个span元素&quot;&gt;
+&lt;h3&gt;基本选择器&lt;/h3&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div id=&quot;one&quot; class=&quot;one&quot;&gt;id为one,class为one的div
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;two&quot; class=&quot;one&quot; title=&quot;test&quot;&gt;id为two,class为one,title为test的div
+    &lt;div class=&quot;mini&quot; title=&quot;other&quot;&gt;class为mini,title为other&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&quot;three&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;forth&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;five&quot; class=&quot;one&quot; type=&quot;hidden&quot;&gt;包含input的type为hidden的div
+
+&lt;/div&gt;
+&lt;span id=&quot;six&quot; class=&quot;one&quot;&gt;^^span元素111^^
+
+&lt;/span&gt;
+&lt;span id=&quot;seven&quot; class=&quot;one&quot;&gt;^^span元素222^^
+
+&lt;/span&gt;
+&lt;div id=&quot;mover&quot; class=&quot;one&quot;&gt;正在执行动画的div元素
+
+&lt;/div&gt;
+
+&lt;/body&gt;</code></pre><h2 id="2-4-内容过滤选择器"><a href="#2-4-内容过滤选择器" class="headerlink" title="2.4    内容过滤选择器"></a>2.4    内容过滤选择器</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+    .one {
+        width: 120px;
+        height: 120px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 5px;
+        float: left;
+    }
+
+    .mini {
+        width: 50px;
+        height: 50px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 3px;
+        font-size: 10px;
+        float: left;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    $(document).ready(function() {
+
+        function anmateIt() {
+            $(&quot;#mover&quot;).slideToggle(&quot;slow&quot;, anmateIt);
+        }
+        anmateIt();
+        $(&quot;#btn1&quot;).click(function() {
+            /* 选择含有文本‘di’的div元素 */
+            $(&quot;div:contains(&apos;di&apos;)&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn2&quot;).click(function() {
+            /*选择不含子元素（或文本元素的）div元素 */
+            $(&quot;div:empty&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+        $(&quot;#btn3&quot;).click(function() {
+            /*  选择含有class为mini元素的div元素*/
+            $(&quot;div:has(.mini)&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn4&quot;).click(function() {
+            /*选择含有子元素（或文本元素）的div元素*/
+            // $(&quot;div:parent&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+            $(&quot;div:not(:empty)&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;选择含有文本的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn2&quot; value=&quot;选择不含子元素（或文本元素的）div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn3&quot; value=&quot;选择含有class为mini元素的div元素&quot;&gt;
+
+&lt;input type=&quot;button&quot; id=&quot;btn4&quot; value=&quot;选择含有子元素（或文本元素）的div元素&quot;&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;div id=&quot;one&quot; class=&quot;one&quot;&gt;id为one,class为one的div
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;two&quot; class=&quot;one&quot; title=&quot;test&quot;&gt;id为two,class为one,title为test的div
+    &lt;div class=&quot;mini&quot; title=&quot;other&quot;&gt;class为mini,title为other&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&quot;three&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;forth&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;five&quot; class=&quot;one&quot; type=&quot;hidden&quot;&gt;包含input的type为hidden的div
+
+&lt;/div&gt;
+
+    &lt;div id=&quot;mover&quot; class=&quot;one&quot;&gt;正在执行动画的div元素
+    &lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre><h2 id="2-5-可见性过滤选择器"><a href="#2-5-可见性过滤选择器" class="headerlink" title="2.5    可见性过滤选择器"></a>2.5    可见性过滤选择器</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+    div {
+        width: 120px;
+        height: 120px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 5px;
+        float: left;
+    }
+
+    div.mini {
+        width: 50px;
+        height: 50px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 3px;
+        font-size: 10px;
+        float: left;
+    }
+
+    div.hide {
+        display: none;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    $(document).ready(function() {
+
+        $(&quot;#btn1&quot;).click(function() {
+            /* 选择所有可见的div元素 */
+            $(&quot;div:visible&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn2&quot;).click(function() {
+            /*选择所有不可见的div元素 */
+            /* 
+            show(time):可以使不可见的元素变为可见，time表示时间，以毫秒为单位
+            jquery的很多方法支持方法的连缀，
+            即一个方法的返回值来调用该方法的jQuery对象：可以继续调用该方法的其他方法
+             */
+            $(&quot;div:hidden&quot;).show(2000).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+            // alert($(&quot;div:hidden&quot;).length);
+        });
+
+        $(&quot;#btn3&quot;).click(function() {
+            /*  选择所有不可见的input元素*/
+            /* val() 方法可以返回某一个表单元素的value属性值*/
+            alert($(&quot;input:hidden&quot;).val());
+
+        });
+
+    })
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;选择所有可见的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn2&quot; value=&quot;选择所有不可见的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn3&quot; value=&quot;选择所有不可见的input元素&quot;&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div id=&quot;one&quot; class=&quot;one&quot;&gt;id为one,class为one的div
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;two&quot; class=&quot;one&quot; title=&quot;test&quot;&gt;id为two,class为one,title为test的div
+    &lt;div class=&quot;mini&quot; title=&quot;other&quot;&gt;class为mini,title为other&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&quot;three&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;forth&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: none;&quot;&gt;style的display为“none”的div
+&lt;/div&gt;
+&lt;div class=&quot;hide&quot;&gt;
+    class为“hide”的div
+&lt;/div&gt;
+&lt;div id=&quot;five&quot; class=&quot;one&quot;&gt;包含input的type为hidden的div
+    &lt;input type=&quot;hidden&quot; value=&quot;123456789&quot; size=&quot;8&quot;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;mover&quot; class=&quot;one&quot;&gt;正在执行动画的div元素
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre><h2 id="2-6-属性过滤选择器"><a href="#2-6-属性过滤选择器" class="headerlink" title="2.6    属性过滤选择器"></a>2.6    属性过滤选择器</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+    div {
+        width: 120px;
+        height: 120px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 5px;
+        float: left;
+    }
+
+    div.mini {
+        width: 50px;
+        height: 50px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 3px;
+        font-size: 10px;
+        float: left;
+    }
+
+    div.hide {
+        display: none;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    $(document).ready(function() {
+
+        $(&quot;#btn1&quot;).click(function() {
+            /* 选取含有属性title的div元素*/
+            $(&quot;div[title]&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn2&quot;).click(function() {
+            /*选取属性title值等于test的div元素 */
+            $(&quot;div[title=&apos;test&apos;]&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+        $(&quot;#btn3&quot;).click(function() {
+            /* 选取属性title值不等于test的div元素（没有属性title也将被选中）*/
+            $(&quot;div[title!=&apos;test&apos;]&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn4&quot;).click(function() {
+            /* 选取属性title值以te开始的div元素*/
+
+            $(&quot;div[title^=&apos;te&apos;]&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn5&quot;).click(function() {
+            /*选取属性title值以est结束的div元素 */
+            $(&quot;div[title$=&apos;est&apos;]&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+        $(&quot;#btn6&quot;).click(function() {
+            /* 选取属性title值含有es的div元素 */
+
+            $(&quot;div[title*=&apos;es&apos;]&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn7&quot;).click(function() {
+            /*组合属性选择器首先选区有属性id的div元素，然后在结果中选择属性title值含有es的div元素 */
+            $(&quot;div[id][title*=&apos;es&apos;]&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+        $(&quot;#btn8&quot;).click(function() {
+            /*选取含有title属性值，且title属性值不等于test的div元素 */
+            $(&quot;div[title][title!=&apos;test&apos;]&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+        });
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;选取含有属性title的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn2&quot; value=&quot;选取属性title值等于test的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn3&quot; value=&quot;选取属性title值不等于test的div元素（没有属性title也将被选中）&quot;&gt;
+
+&lt;input type=&quot;button&quot; id=&quot;btn4&quot; value=&quot;选取属性title值以te开始的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn5&quot; value=&quot;选取属性title值以est结束的div元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn6&quot; value=&quot;选取属性title值含有es的div元素&quot;&gt;
+
+&lt;input type=&quot;button&quot; id=&quot;btn7&quot; value=&quot;组合属性选择器首先选区有属性id的div元素，然后在结果中选择属性title值含有es的div元素&quot;&gt;
+
+&lt;input type=&quot;button&quot; id=&quot;btn8&quot; value=&quot;选取含有title属性值，且title属性值不等于test的div元素&quot;&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;div id=&quot;one&quot; class=&quot;one&quot;&gt;id为one,class为one的div
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;two&quot; class=&quot;one&quot; title=&quot;test&quot;&gt;id为two,class为one,title为test的div
+    &lt;div class=&quot;mini&quot; title=&quot;other&quot;&gt;class为mini,title为other&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&quot;three&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;forth&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: none;&quot;&gt;style的display为“none”的div
+&lt;/div&gt;
+&lt;div class=&quot;hide&quot;&gt;
+    class为“hide”的div
+&lt;/div&gt;
+&lt;div id=&quot;five&quot; class=&quot;one&quot;&gt;包含input的type为hidden的div
+    &lt;input type=&quot;hidden&quot; value=&quot;123456789&quot; size=&quot;8&quot;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;mover&quot; class=&quot;one&quot;&gt;正在执行动画的div元素
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre><h2 id="2-7-子元素过滤选择器"><a href="#2-7-子元素过滤选择器" class="headerlink" title="2.7    子元素过滤选择器"></a>2.7    子元素过滤选择器</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+    div {
+        width: 120px;
+        height: 120px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 5px;
+        float: left;
+    }
+
+    div.mini {
+        width: 50px;
+        height: 50px;
+        background-color: darkgray;
+        border: 1px solid;
+        margin: 3px;
+        font-size: 10px;
+        float: left;
+    }
+
+    div.hide {
+        display: none;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    $(document).ready(function() {
+
+        $(&quot;#btn1&quot;).click(function() {
+            /* 选取每个class为one的div父元素下的第2个子元素*/
+            //选取子元素，需要在选择器前添加一个空格
+            $(&quot;div.one :nth-child(2)&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn2&quot;).click(function() {
+            /*选取每个class为one的div父元素下的第一个子元素 */
+            $(&quot;div.one :first-child&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+        $(&quot;#btn3&quot;).click(function() {
+            /* 选取每个class为one的div父元素下的最后一个子元素*/
+            $(&quot;div.one :last-child&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+        $(&quot;#btn4&quot;).click(function() {
+            /*如果class为one的div父元素下的仅仅只有一个子元素，那么选中这个子元素*/
+
+            $(&quot;div.one :only-child&quot;).css(&quot;background&quot;, &quot;#ffbbaa&quot;);
+
+        });
+
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;选取每个class为one的div父元素下的第2个子元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn2&quot; value=&quot;选取每个class为one的div父元素下的第一个子元素&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btn3&quot; value=&quot;选取每个class为one的div父元素下的最后一个子元素&quot;&gt;
+
+&lt;input type=&quot;button&quot; id=&quot;btn4&quot; value=&quot;如果class为one的div父元素下的仅仅只有一个子元素，那么选中这个子元素&quot;&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;div id=&quot;one&quot; class=&quot;one&quot;&gt;id为one,class为one的div
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;two&quot; class=&quot;one&quot; title=&quot;test&quot;&gt;id为two,class为one,title为test的div
+    &lt;div class=&quot;mini&quot; title=&quot;other&quot;&gt;class为mini,title为other&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&quot;three&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;forth&quot; class=&quot;one&quot;&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot;&gt;class为mini&lt;/div&gt;
+    &lt;div class=&quot;mini&quot; title=&quot;test&quot;&gt;class为mini,title为test&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: none;&quot;&gt;style的display为“none”的div
+&lt;/div&gt;
+&lt;div class=&quot;hide&quot;&gt;
+    class为“hide”的div
+&lt;/div&gt;
+&lt;div id=&quot;five&quot; class=&quot;one&quot;&gt;包含input的type为hidden的div
+    &lt;input type=&quot;hidden&quot; value=&quot;123456789&quot; size=&quot;8&quot;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;mover&quot; class=&quot;one&quot;&gt;正在执行动画的div元素
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre><h2 id="2-8-表单对象过滤选择器"><a href="#2-8-表单对象过滤选择器" class="headerlink" title="2.8    表单对象过滤选择器"></a>2.8    表单对象过滤选择器</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script&gt;
+    $(function() {
+        $(&quot;#btn1&quot;).click(function() {
+            //对表单内可用input赋值操作，对可见单行文本框的值改变
+            $(&quot;:text:enabled&quot;).val(&quot;文喵喵&quot;);
+        });
+        $(&quot;#btn2&quot;).click(function() {
+            //对表单内不可用input赋值操作，对不可见单行文本框的值改变
+            $(&quot;:text:disabled&quot;).val(&quot;文喵喵&quot;);
+        });
+        $(&quot;#btn3&quot;).click(function() {
+            //获取多选框中的个数
+            var num = $(&quot;:checkbox[name=&apos;newsletter&apos;]:checked&quot;).length;
+            alert(num);
+        });
+
+        $(&quot;#btn4&quot;).click(function() {
+            //获取多选框中的内容
+            $(&quot;:checkbox[name=&apos;newsletter&apos;]:checked&quot;).each(function() {
+                alert(this.value);
+
+            });
+
+        });
+
+
+        $(&quot;#btn5&quot;).click(function() {
+            //获取下拉框选中的内容
+            /* 
+            实际被选择的不是select，二十select的option子节点
+            所以要加一个空格.
+             */
+            // var len = $(&quot;select :selected&quot;).length;
+            // alert(len);
+
+            /* 
+            因为 $(&quot;select :selected&quot;)选择的是一个数组
+            当该数组中有多个元素时，通过.val()方法就只能获取第一个被选择的值额
+             */
+            // var content = $(&quot;select :selected&quot;).val();
+            // alert(content);
+            /* 
+            jQuery对象遍历的方式是使用each，在each内部的this是正在
+            得到的DOM对象，而不是一个Jquery对象
+             */
+            $(&quot;select :selected&quot;).each(function() {
+
+                alert(this.value);
+
+            });
+        });
+
+    })
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h3&gt;表单对象属性过滤选择器&lt;/h3&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;对表单内可用input赋值操作&quot; id=&quot;btn1&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;对表单内不可用input赋值操作&quot; id=&quot;btn2&quot;&gt;
+&lt;br&gt; &lt;br&gt;
+&lt;input type=&quot;button&quot; value=&quot;获取多选框中的个数&quot; id=&quot;btn3&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;获取多选框中的内容&quot; id=&quot;btn4&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;获取下拉框选中的内容&quot; id=&quot;btn5&quot;&gt; &lt;br&gt; &lt;br&gt;
+
+&lt;form action=&quot;#&quot; id=&quot;form1&quot;&gt;
+    可用元素：
+    &lt;input name=&quot;add&quot; value=&quot;^^可用的input&quot;&gt;&lt;br&gt; 不可用元素：
+    &lt;input name=&quot;email&quot; disabled=&quot;disabled&quot; value=&quot;^^不可用的input&quot;&gt;&lt;br&gt; 可用元素：
+    &lt;input name=&quot;che&quot; value=&quot;^^可用的input&quot;&gt;&lt;br&gt; 不可用元素：
+    &lt;input name=&quot;name&quot; disabled=&quot;disabled&quot; value=&quot;^^不可用的input&quot;&gt;&lt;br&gt;
+    &lt;br&gt; &lt;br&gt; 多选框：
+    &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; name=&quot;newsletter&quot;&gt;test1
+    &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; name=&quot;newsletter&quot;&gt;test2
+    &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; name=&quot;newsletter&quot;&gt;test3
+    &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; name=&quot;newsletter&quot;&gt;test4
+    &lt;input type=&quot;checkbox&quot; name=&quot;newsletter&quot;&gt;test5
+
+    &lt;br&gt;&lt;br&gt; 下拉列表1：
+    &lt;br&gt;
+    &lt;select name=&quot;test&quot; id=&quot;&quot; multiple=&quot;multiple&quot; style=&quot;height: 100px;&quot;&gt;
+&lt;option &gt;浙江&lt;/option&gt;
+&lt;option selected=&quot;selected&quot; &gt;辽宁&lt;/option&gt;
+&lt;option &gt;北京&lt;/option&gt;
+&lt;option  selected=&quot;selected&quot;&gt;天津&lt;/option&gt;
+&lt;option &gt;广州&lt;/option&gt;
+&lt;option &gt;湖北&lt;/option&gt;
+
+        &lt;/select&gt;
+        &lt;br&gt;&lt;br&gt; 下拉列表2：
+        &lt;br&gt;
+        &lt;select name=&quot;test2&quot;&gt;
+&lt;option &gt;浙江&lt;/option&gt;
+&lt;option  &gt;辽宁&lt;/option&gt;
+&lt;option  selected=&quot;selected&quot;&gt;北京&lt;/option&gt;
+&lt;option  &gt;天津&lt;/option&gt;
+&lt;option &gt;广州&lt;/option&gt;
+&lt;option &gt;湖北&lt;/option&gt;
+
+        &lt;/select&gt;
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre><p>2.9    总结</p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持miaomiao</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2019/02/04/servlet映射路径/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2019/02/24/Java笔记第十章/Java基础知识/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="https://valeriehu1995.github.io/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

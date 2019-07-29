@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Javasript | PPPig1994</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Javasript,">
+  
+
+  <meta name="description" content="1 Javascript之BOM与DOM讲解    11.1    [window. Window方法] 1.2    Window.open:打开一个新窗口     1.3    Window.close:关闭一个新窗口     1.4    定时器：     1.5    图片切换案例：     1.6    Location对象     1.7    History对象：     1.8">
+<meta name="keywords" content="Javasript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javasript">
+<meta property="og:url" content="https://pppig1994.github.io/2019/01/28/JavaScript/javascript/index.html">
+<meta property="og:site_name" content="PPPig1994">
+<meta property="og:description" content="1 Javascript之BOM与DOM讲解    11.1    [window. Window方法] 1.2    Window.open:打开一个新窗口     1.3    Window.close:关闭一个新窗口     1.4    定时器：     1.5    图片切换案例：     1.6    Location对象     1.7    History对象：     1.8">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-29T02:39:32.343Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javasript">
+<meta name="twitter:description" content="1 Javascript之BOM与DOM讲解    11.1    [window. Window方法] 1.2    Window.open:打开一个新窗口     1.3    Window.close:关闭一个新窗口     1.4    定时器：     1.5    图片切换案例：     1.6    Location对象     1.7    History对象：     1.8">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-38189205-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+</head>
+</html>
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="https://valeriehu1995.github.io/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Javascript之BOM与DOM讲解-1"><span class="toc-text">1 Javascript之BOM与DOM讲解    1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-DOM"><span class="toc-text">2 DOM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-事件"><span class="toc-text">3 事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-DOM-1"><span class="toc-text">2 DOM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-事件-1"><span class="toc-text">3    事件</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-JavaScript/javascript" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Javasript</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.01.28</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>PPPig</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Javasript/">Javasript</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="1-Javascript之BOM与DOM讲解-1"><a href="#1-Javascript之BOM与DOM讲解-1" class="headerlink" title="1 Javascript之BOM与DOM讲解    1"></a>1 Javascript之BOM与DOM讲解    1</h1><pre><code>1.1    [window. Window方法]
+1.2    Window.open:打开一个新窗口    
+1.3    Window.close:关闭一个新窗口    
+1.4    定时器：    
+1.5    图片切换案例：    
+1.6    Location对象    
+1.7    History对象：    
+1.8    Screen对象；    
+1.9    Navigator对象：    </code></pre><h1 id="2-DOM"><a href="#2-DOM" class="headerlink" title="2 DOM"></a>2 DOM</h1><pre><code>2.1    第一集 DOM基本内容    
+2.2    第三集 获取属性节点    
+2.3    第四集 获取元素节点的子节点    
+2.4    第五集点击每个li节点，都弹出其文本值    
+2.5    第六集：关于节点的属性：    
+2.6    第八集 创建新的元素节点和属性节点    
+2.7    第九集节点的替换    
+2.8    第十集插入节点    
+2.9    第十三集    
+2.10第十六集    
+2.11Node类型    </code></pre><h1 id="3-事件"><a href="#3-事件" class="headerlink" title="3 事件"></a>3 事件</h1><pre><code>3.1    Javascript有三种事件类型：内敛模型，脚本模型，DOM2模型    20
+3.2    事件处理函数：    
+3.3    鼠标事件：    
+3.4    键盘事件：    
+3.5    HTML事件    
+3.6    事件对象：    
+3.7    给整个文档添加鼠标移动事件    
+3.8    事件的冒泡：    
+3.9    事件的委派：    
+3.10    事件的绑定：    
+3.11    事件的捕获阶段：    
+3.12    事件之拖拽    
+3.13    滚轮事件    
+3.14    键盘事件    </code></pre><p><strong>1    Javascript之BOM与DOM讲解</strong><br><a href="https://blog.csdn.net/qq877507054/article/details/51395830" target="_blank" rel="noopener">https://blog.csdn.net/qq877507054/article/details/51395830</a></p>
+<ol>
+<li><p>window. Window方法<br>window的三个弹出框</p>
+</li>
+<li><p>alert</p>
+</li>
+<li><p>prompt:含有一个默认参数（张无忌）</p>
+</li>
+<li><p>comfirm：<br>//第二个是可选参数，默认输入的为该值</p>
+<pre><code>var n = prompt(&quot;请输入你的名字&quot;, &quot;张无忌&quot;);
+alert(typeof (n));
+//prompt若不填写信息点击确定得到空字符串，
+//如果用户点击取消得到的是null           
+var m = confirm(&quot;你是帅哥吗？&quot;);
+alert(m);
+
+//三个弹窗练习
+var flag = confirm(&quot;你吃早餐了嘛？&quot;)
+if (flag) {
+    var type = prompt(&quot;你早餐吃了什么？&quot;, &quot;包子&quot;);
+    if (type == &quot;包子&quot;)
+        alert(&quot;包子太油腻建议少吃&quot;);
+    else
+        alert(&quot;你为什么不吃包子&quot;);
+} else
+    alert(&quot;早餐还是要吃的&quot;);</code></pre></li>
+</ol>
+<p><strong>1.2    Window.open:打开一个新窗口</strong><br>Window.open(“l链接”，‘’name‘’，‘’设置‘’);</p>
+<ol>
+<li>width：设置窗口的宽度</li>
+<li>heigh：高度</li>
+<li>left：新窗口到左端的距离</li>
+<li>top：新窗口到顶部的距离</li>
+<li>scrollbars：滚动条【yes，no，1，0】</li>
+<li>toolbars：工具栏【yes，no】</li>
+</ol>
+<p><strong>1.3    Window.close:关闭一个新窗口</strong><br>    function fn() {</p>
+<pre><code>        window.close();
+    }
+&lt;/script&gt;
+&lt;input type=&quot;button&quot; value=&quot;关闭窗口&quot; onclick=&quot;fn&quot;&gt;</code></pre><p><strong>1.4    定时器：</strong><br>一次性定时器：varabcd=windows.setTimeout(“js代码”,时间t);<br>执行：实在是时间t之后执行js代码（只会执行一次）<br>时间：以毫秒为单位<br>反复性定时器:window.setInterval(“js代码”,时间t)<br>执行：是每过时间t就会执行一次js代码（n次）<br>时间：以毫秒为单位<br>清除定时器：<br>清楚一次性定时器：window.clearTimeout(name);<br>清除反复性定时器：window.clearInterval(name);<br>注意：要清除定时器，必须给定时器命名，匿名无法清除定时器<br>    //var dsq= window.setTimeout(“fn()”, 3000);<br>      var dsq=window.setInterval(“fn()”,2000);</p>
+<pre><code>    function fn() {
+
+        alert(&quot;456&quot;);
+    }
+function fun(){
+
+   // window.clearTimeout(dsq);
+    window.clearInterval(dsq)
+}
+&lt;/script&gt;
+
+&lt;body&gt;
+&lt;input type=&quot;button&quot; value=&quot;清除定时器&quot; onclick=&quot;fun()&quot;&gt;
+定时器案例：
+window.onload = init;
+
+    function init() {
+        fun();
+        window.setInterval(&quot;fun()&quot;, 1000);
+    }
+
+    function fun() {
+        var t = new Date();
+        document.getElementById(&quot;div1&quot;).innerHTML = t.toLocaleString();
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;div1&quot;&gt;
+    时间
+&lt;/div&gt;</code></pre><p><strong>1.5    图片切换案例：</strong></p>
+<ol>
+<li>定时器，反复性定时器</li>
+<li>页面加载完成才会切换图片，onload事件</li>
+<li>鼠标放在图片上，图片停止，鼠标离开图片，图片会跳动起来</li>
+<li>鼠标放到列表上，图片停止对应的图片，背景颜色要更换</li>
+<li>鼠标离开列表上，图片自动切换，背景颜色也自动切换</li>
+</ol>
+<p><strong>1.6    Location对象</strong></p>
+<ol>
+<li>Location.href:返回url信息，也可以给其赋值，实现跳转页面【跳转】</li>
+<li>Location.assign()加载新的文档【跳转】</li>
+<li>Location.reload()重新加载文档</li>
+<li>Location.replace()用新的页面代替当前页面【跳转</li>
+<li>Location.assign()会产生历史纪录</li>
+<li>Location.replace()不会产生历史纪录</li>
+</ol>
+<p>//获取地址<br>            //  var address = location.href;<br>            // document.write(address);<br>            //页面跳转<br>            // location.href = “file:///C:/Users/luffy/Documents/javascript/BOM/window_time.html”;<br>            //方法：assign加载新的文档【跳转页面】<br>            //  location.assign(“file:///C:/Users/luffy/Documents/javascript/BOM/window_time.html”);<br>            //location.reload();<br>            location.replace(“file:///C:/Users/luffy/Documents/javascript/BOM/window_time.html”);</p>
+<pre><code>页面跳转案例：
+&lt;script&gt;
+    window.onload = init();
+
+    function init() {
+        window.setTimeout(&quot;tiaozhuan()&quot;, 5000);
+        window.setInterval(&quot;shijian()&quot;, 1000);
+    }
+
+    function tiaozhuan() {
+        location.replace(&quot;http://www.baidu.com/&quot;);
+    }
+
+    function shijian() {
+        var obj = document.getElementById(&quot;d1&quot;);
+        var n = obj.innerHTML;
+        obj.innerHTML = n - 1;
+    }
+&lt;/script&gt;</code></pre><body>
+    账号注册成功，页面在<span id="d1">5</span>s会自动跳转到首页
+</body>
+
+<p>1.7    History对象：</p>
+<ol>
+<li><p>History.length:获取浏览过的数量</p>
+</li>
+<li><p>History.back:返回历史纪录的前一个页面 </p>
+</li>
+<li><p>History.Forward:加载历史记录的下一个页面</p>
+</li>
+<li><p>History.go(n)跳转历史纪录中指定的页面，如果是-89oil’k1实际上就是hist.back的功能</p>
+<p> function fn() {</p>
+<pre><code>    var n = history.length;
+    alert(n);
+}
+
+function fun() {
+    //    location.href = &quot;http://www.baidu.com/&quot;;
+    location.href = &quot;history_back.html&quot;;
+
+}
+
+function func() {
+    history.forward();
+
+}</code></pre> <body>
+     <input type="button" value="点击查看" onclick="fn()">
+     <input type="button" value="点击跳转" onclick="fun()">
+     <input type="button" value="点击faward" onclick="func()">
+ </body>
+
+
+</li>
+</ol>
+<pre><code>function fun() {
+            history.back();
+
+    }</code></pre><p><strong>1.8    Screen对象；</strong></p>
+<ol>
+<li><p>Screen.heght:获取屏幕的高度</p>
+</li>
+<li><p>Screen.width:获取屏幕的亮度</p>
+</li>
+<li><p>availHeight:获取除去任务栏的高度</p>
+</li>
+<li><p>availWidth:获取出去任务栏的宽度<br> function func() {</p>
+<pre><code>    var h = screen.height;
+    var w = screen.width;
+    var ah = screen.availHeight;
+    var aw = screen.availWidth;
+    alert(w + &quot; &quot; + h + &quot;&lt;/br&gt;&quot; + ah + &quot; &quot; + aw);
+
+}</code></pre></li>
+</ol>
+<p><strong>1.9    Navigator对象：</strong></p>
+<ol>
+<li><p>Appname：获取浏览器名称</p>
+</li>
+<li><p>navigator.appCodeName：获取浏览器代码名称</p>
+</li>
+<li><p>appversion：版本号和平台信息</p>
+</li>
+<li><p>useragent：浏览器信息<br> function func() {</p>
+<pre><code>    //var name = navigator.appName;
+    //var name = navigator.appCodeName
+    //var name = navigator.appVersion;
+    var name = navigator.userAgent;
+    alert(name);
+
+}</code></pre><p> //打开页面之后，弹出用户用的是什么浏览器</p>
+<pre><code>window.onload = init;
+
+function init() {
+    var obj = navigator.userAgent; //获取浏览器信息
+    if (obj.indexOf(&quot;Firefox&quot;) != -1) {
+        alert(&quot;火狐&quot;);
+    } else if (obj.indexOf(&quot;Chrome&quot; != -1)) {
+
+        alert(obj + &quot;谷歌&quot;);
+    } else {
+        alert(&quot;ie&quot;);
+    }
+
+}</code></pre></li>
+</ol>
+<h1 id="2-DOM-1"><a href="#2-DOM-1" class="headerlink" title="2 DOM"></a>2 DOM</h1><p><strong>2.1    第一集 DOM基本内容</strong><br>问题：在html文档的什么位置写js代码？</p>
+<ol>
+<li><p>直接在html页面中书写代码<br> <button id="”button”" onclick="”alert(“hello!!!”)”">cilick Me</button><button></button></p>
+<blockquote>
+<p>缺点：<br>Js与html强耦合，不利于代码的维护<br>若click相应函数是比较复杂的，组需要先定义一个函数，然后再在onclick属性中完成对函数的引用，比较麻烦</p>
+</blockquote>
+</li>
+<li><p>一般的不能再body节点之前来直接获取body内的节点，因为此时html文档树还没加载完成，获取不到指定的节点</p>
+</li>
+<li><p>可以在整个html文档的最后编写类似代码，但这不符合习惯<br>var btns = document.getElementsByTagName(“button”);</p>
+<pre><code>alert(btns.length);
+//2.添加onclick事件
+btns[0].onclick = function () {
+
+    alert(&quot;hello!!!&quot;);</code></pre></li>
+</ol>
+<ol start="4">
+<li>一般地，在body节点之前编写js代码，但需要window.Onlode事件，该事件在当前文档完全加载之后被触发，所以其中的代码可以获取到当前文档的任何节点</li>
+</ol>
+<p><strong>2.2    第三集 获取属性节点</strong><br>获取属性节点：</p>
+<ol>
+<li><p>可以直接通过citynode.id这样的方式来获取和设置属性节点的值<br> var txtinput = document.getElementById(“name”);</p>
+<pre><code>alert(txtinput.value);
+txtinput.value = &quot;文本框&quot;;</code></pre></li>
+<li><p>通过元素节点的getAttributeNode方法来获取属性节点，然后再通过nodevalue来读写属性值</p>
+</li>
+</ol>
+<p><strong>2.3    第四集 获取元素节点的子节点</strong><br>获取元素节点的子节点（只有元素节点才有子节点！！！！）：</p>
+<ol>
+<li>.childNodes属性获取全部的子节点，但是该方法不实用。因为如果要获取指定的节点的制定子节点的集合，可以直接的调用原色节点的getelementByTagName（）方法来获取</li>
+<li>.firstChild属性获取第一个子节点</li>
+<li>.lastChild属性获取最后一个子节点<br>获取文本节点：</li>
+<li>步骤：元素节点-获取元素节点的子节点</li>
+<li>若元素节点只有文本节点一个子节点，例如</li><li id="bj" name="beijing">北京</li>,<p>你喜欢哪个城市</p>
+可以先获取制定的元素节点eleNode，
+然后利用eleNode.firstChild.nodeValue的方法来读写其文本节点的值
+</ol>
+<p><strong>2.4    第五集点击每个li节点，都弹出其文本值</strong><br>    //点击每个li节点，都弹出其文本值<br>        //1.获取所有的li节点<br>        window.onload = function () {</p>
+<pre><code>var liNodes = document.getElementsByTagName(&quot;li&quot;);
+//2.使用for循环进行遍历，得到每一个li节点s
+for (var i = 0; i &lt; liNodes.length; i++) {
+    //3.为每个li添加onclick响应函数，并输出其文本值
+    liNodes[i].onclick = function () {
+        //this为正在响应事件那个节点
+        alert(this.firstChild.nodeValue);
+        //此时i已经是9了，而liNodes不指向任何节点
+        alert(i);
+    }
+}
+
+//点击每个li节点，若li节点的文本值没有^^开头，加上，有则去除
+var cityNode = document.getElementById(&quot;city&quot;);
+var cityliNodes = cityNode.getElementsByTagName(&quot;li&quot;);
+for (var i = 0; i &lt; cityliNodes.length; i++) {
+
+    cityliNodes[i].onclick = function () {
+        var val = this.firstChild.nodeValue;
+        var reg = /^\^{2}/g;
+        if (reg.test(val)) {
+           val= val.replace(reg, &quot;&quot;);
+        } else {
+            val = &quot;\^\^&quot; + val;
+        }
+    }
+    this.firstChild.nodeValue = val;
+}</code></pre><p><strong>2.5    第六集：关于节点的属性：</strong></p>
+<ol>
+<li><p>关于节点的属性：nodetype（只读）、nodeName（只读）、nodeValue（可以被改变的）以上三个属性，只有在文本节点使用nodeValue读写文本值中使用最多</p>
+</li>
+<li><p>在文档中，任何一个节点值都具有这三个属性<br>而id、name、value是具体节点的属性<br> //元素节点 ul 为元素节点</p>
+<pre><code>var ulNode = document.getElementsByTagName(&quot;ul&quot;);
+
+//属性节点  name=&quot;水果&quot; 为属性节点
+var attrNode = document.getElementById(&quot;fruit&quot;).getAttributeNode(&quot;name&quot;);
+var attr2Node = document.getElementById(&quot;fruit&quot;).getAttributeNode(&quot;width&quot;);</code></pre></li>
+</ol>
+<pre><code>//文本节点  点我
+var textNode = document.getElementById(&quot;btn1&quot;).firstChild;  //注意这里获取文本节点的方式
+
+btnNode[0].onclick = function(){
+    alert(fruitNode.getElementsByTagName(&quot;li&quot;).length);
+
+    //以下右边注释为运行的结果
+    //获取元素节点的三要素:nodeType,nodeName,nodeValue
+    alert(ulNode[0].nodeType);  //1
+    alert(ulNode[0].nodeName);  //UL
+    alert(ulNode[0].nodeValue); //null
+
+    //获取属性节点的三要素:nodeType,nodeName,nodeValue
+    alert(attrNode.nodeType);  //2
+    alert(attrNode.nodeName);  //name
+    alert(attrNode.nodeValue); //水果
+
+    alert(attr2Node.nodeType);  //2
+    alert(attr2Node.nodeName);  //width
+    alert(attr2Node.nodeValue); //80px;
+
+    //获取文本节点的三要素:nodeType,nodeName,nodeValue 
+    alert(textNode.nodeType);  //3
+    alert(textNode.nodeName);  //#TEXT
+    alert(textNode.nodeValue); //点我        </code></pre><p><strong>2.6    第八集 创建新的元素节点和属性节点</strong></p>
+<ol>
+<li><p> //新创建一个元素节点，并把该节点添加为指定节点的子节点</p>
+<pre><code>window.onload = function () {
+
+    //1、document.createElement（elementTagName）
+    //新创建一个元素节点，返回值为值为指向元素节点的引用
+    var liNode = document.createElement(&quot;li&quot;);
+    var cityNode = document.getElementById(&quot;city&quot;);
+    //2、创建一个“厦门”的文本节点
+    //document.CreateTextNode(string)创建一个文本节点</code></pre><p> //参数为文本值，返回该文本节点的引用</p>
+<pre><code>    var xmText = document.createTextNode(&quot;厦门&quot;);
+    liNode.appendChild(xmText);
+
+    //3、elementNode.appendChild（newChild）：为elementNode新
+    //添加newChld子节点，该子节点将作为elementNode的最后一个字节点
+
+    cityNode.appendChild(liNode);
+}</code></pre></li>
+<li><p> window.onload = function () {</p>
+<pre><code>    //获取submit元素节点，为submit添加onclick函数，在onclick响应函数的结尾处添加retuen
+    //false，就可以取消提交按钮的默认行为
+    var Submit = document.getElementById(&quot;submit&quot;);
+    Submit.onclick = function () {
+        //1、获取type单选按钮元素节点，遍历radioNodes数组，检查是否有选中的类型type，若无选中的type类型，提示出错
+        var radioNodes = document.getElementsByName(&quot;type&quot;);
+        var typeval = null;
+        for (var i = 0; i &lt; radioNodes.length; i++) {
+            if (radioNodes[i].checked) {
+                typeval = radioNodes[i].value;
+                break;
+            }
+
+        }
+        if (typeval == null) {
+            alert(&quot;请选择类型&quot;);
+            return false;
+        }
+        //2、获取文本框元素，取得文本节点值，并去除文本框前后的空格
+        var nameEle = document.getElementsByName(&quot;name&quot;)[0].;
+        var nameval=nameEle.value;
+        var reg = /^\s*|^\s*/g;
+        nameval = nameval.replace(reg, &quot;&quot;);
+        //3、检查文本框输入、若为空，提示请输入内容
+        if (nameval == &quot;&quot;){
+            alert(&quot;请输入内容&quot;);
+            return false;
+        }
+
+        //4、创建一个新的li元素节点
+        var liNode = document.createElement(&quot;li&quot;);
+        //5、创建一个新的文本节点，并附在li元素节点的子节点
+        var txtNode = document.createTextNode(nameval);
+        liNode.appendChild(txtNode);
+        //6、将li元素节点放置在对应type的ul元素子节点的最后
+        var typeNode = document.getElementById(typeval);
+        typeNode.appendChild(liNode);
+        return false;
+    }
+} </code></pre><p> </p>
+ 
+
+ <body>
+ <ul id="city">你喜欢哪一个城市
+     <br>
+     <li id="bj" name="beijing">^^北京</li>
+     <li id="sh" name="shanghai">上海</li>
+     <li>东京</li>
+     <li>巴黎</li>
+ </ul>
+ <ul id="game">你喜欢哪款单机游戏
+     <br>
+     <li id="hj" name="hongjing">红警</li>
+     <li id="sk" name="shikuang">实况</li>
+     <li>极品飞车</li>
+     <li>魔兽</li>
+ </ul>
+ <form name="myform">
+
+<pre><code>&lt;input type=&quot;radio&quot; name=&quot;type&quot; value=&quot;city&quot;&gt;城市
+&lt;input type=&quot;radio&quot; name=&quot;type&quot; value=&quot;game&quot;&gt;游戏 name:
+&lt;input type=&quot;text&quot; id=&quot;txt&quot; name=&quot;name&quot;&gt;
+&lt;input type=&quot;submit&quot; id=&quot;sumbit&quot; value=&quot;Submit&quot; onclick=&quot;return checkLength()&quot;&gt;</code></pre> </form>
+
+ </body>
+
+</li>
+</ol>
+<p><strong>2.7    第九集节点的替换</strong><br>一、    节点的替换<br>//第九集</p>
+<pre><code>window.onload = function () {
+    //1、节点的替换
+    //1.replaceChild():把一个给定元素里的一个子节点替换为另一个子节点
+    // var reference=element.replaceChild(newChild,oldChild);
+    // 返回值是一个只想一杯替换的那个子节点的引用指针
+    // 2.该节点除了替换功能以外还存在移动的功能
+    var bjNode = document.getElementById(&quot;bj&quot;);
+    var hjNode = document.getElementById(&quot;hj&quot;);
+    var cityNode = document.getElementById(&quot;city&quot;);
+    // cityNode.replaceChild(hjNode,bjNode);
+    // //3.该方法只能完成单向替换，若需要使用双向替换，需要自定义函数
+    // 互换aNode和bNode
+    function replaceEach(aNode, bNode) {
+        //1.获取aNode和bNode的父节点，使用parentNode属性
+        var aParent = aNode.parentNode;
+        var bParent = bNode.parentNode;
+        if (aParent &amp;&amp; bParent) {
+            //2.克隆aNode或bNode
+            var aNode2 = aNode.cloneNode(true);
+            //3.调用replaceChild方法替换两个节点
+            bParent.replaceChild(aNode2, bNode);
+            aParent.replaceChild(bNode, aNode);
+        }
+    }
+    // var gameNode = document.getElementById(&quot;game&quot;);
+    // var bjNode2 = bjNode.cloneNode(true);
+    // gameNode.replaceChild(bjNode2, hjNode);
+    // cityNode.replaceChild(hjNode, bjNode); 
+    // replaceEach(bjNode,hjNode);
+
+}</code></pre><p>练习：<br>    window.onload = function () {<br>            function replaceEach(aNode, bNode) {<br>                //1.获取aNode和bNode的父节点，使用parentNode属性<br>                var aParent = aNode.parentNode;<br>                var bParent = bNode.parentNode;<br>                if (aParent &amp;&amp; bParent) {<br>                    //2.克隆aNode或bNode<br>                    var aNode2 = aNode.cloneNode(true);<br>                    //同时复制onclick事件<br>                    aNode2.onclick = aNode.onclick;<br>                    //复制index属性<br>                    aNode2.index = aNode.index;<br>                    //3.调用replaceChild方法替换两个节点<br>                    bParent.replaceChild(aNode2, bNode);<br>                    aParent.replaceChild(bNode, aNode);<br>                }<br>            }<br>            //实现li相同位置的节点互换<br>            //1.获取所有的li元素<br>            var liNodes = document.getElementsByTagName(“li”);<br>            //2.为每个li元素添加onclick函数<br>            for (var i = 0; i &lt; liNodes.length; i++) {<br>                liNodes[i].index = i;<br>                liNodes[i].onclick = function () {<br>                    //3.找到与当前结点对应的li节点<br>                    var targetindex = 0;<br>                    if (this.index &lt; 4) {<br>                        targetindex = 4 + this.index;<br>                    } else<br>                        targetindex = this.index - 4;<br>                    //交换两个节点的index属性<br>                    var temp = 0;<br>                    temp = this.index;<br>                    this.index = liNodes[targetindex].index;<br>                    liNodes[targetindex].index = temp;<br>                    replaceEach(this, liNodes[targetindex]);<br>                }</p>
+<pre><code>    }
+
+}</code></pre><p><strong>2.8    第十集插入节点</strong></p>
+<ol>
+<li><p>insertBefore（）：把一个给定节点插入到一个给定元素的给定子节点的前面<br>var reference= element.inserBefore(newNode,tragetNode);<br>节点newNode将被插入到元素节点element中并出现在节点tarnetNode的前面<br>节点targetNode必须shielement元素的一个子节点</p>
+</li>
+<li><p>自定义inserAfter（）方法<br>/*<br>将newChild插入到referChild的后边<br>*/<br>//插入节点之后<br> //将hj插入到分别插入到东京和巴黎之后<br> function insertAfter(newNode, oldNode) {</p>
+<pre><code>var oldParent = oldNode.parentNode;
+//判断父节点是否存在
+if (oldParent) {
+    var lastNode = oldParent.lastChild;
+    //判断是不是父节点的最后一个子节点，是则直接调用appendChild方法
+    if (oldNode == lastNode)
+        oldParent.appendChild(newNode);
+        //不是则获取给old节点的下一个兄弟节点，调用insertBefore方法，将节点插入到兄弟节点之前
+    else {
+
+        var nextsibling = oldNode.nextsibling;
+        oldParent.insertBefore(newNode, nextsibling);
+    }
+}</code></pre><p> }</p>
+</li>
+</ol>
+<pre><code>window.onload = function () {
+        //insertBefore():插入节点，该方法除了进行插入外，还有移动节点的功能
+        alert(&quot;abc&quot;);
+        //1.把#hj插入到#bj节点之前
+        var bjNode = document.getElementById(&quot;bj&quot;);
+        var hjNode = document.getElementById(&quot;hj&quot;);
+        var cityNode = document.getElementById(&quot;city&quot;);
+        //cityNode.insertBefore(hjNode, bjNode);
+        var djNode=document.getElementById(&quot;dj&quot;);
+        var blNode=document.getElementById(&quot;bl&quot;);
+       // insertAfter(hjNode,blNode);//插入在巴黎之后
+        insertAfter(hjNode,djNode);//插入在东京之后
+
+    }</code></pre><p><strong>2.9    第十三集</strong><br>innerHtml属性<br>1）。浏览器几乎都支持该属性，但不是DOM标准的组成部分<br>innerHTML属性可以用来读写，写某给定元素里的内容</p>
+<p>2.10    第十六集</p>
+<p><strong>2.11    Node类型</strong><br>一、    Node类型</p>
+<ol>
+<li>Javascript中所有节点类型都继承自node类型，所有节点都共享着相同的基本属性和方法</li>
+<li>访问保存在nodelist中的节点——通过方括号或使用item方法<br>二、    Document类型<br>1、    URL属性中包含页面完整的url（即地址栏中显示的URL），domain属性中只包含页面的域名，而referrer属性中则保存着链接到当前页面的那个页面的URL。例如：<br>//取得完整的url<br>  var url = document.URL;<br>  //取得域名<br>  var domain = document.domain;<br>  //取得来源页面的URL<br>  var referrer = document.referrer;<br>Domain是可以设置的，但不能将属性设置为URL中不包含的域</li>
+</ol>
+<p>三、    节点</p>
+<ol>
+<li>元素节点<br>属性节点：元素的属性，可以直接通过属性的方式来操作<br>文本节点：是元素节点的子节点，其内容为文本</li>
+<li>文本节点总是被包含在元素节点的内部</li>
+<li>class属性：</li>
+<li>id属性：给某个元素加上独一无二的标识符、<br>四、    获取元素<br>文档中的每个元素节点都是一个对象</li>
+<li>document.getElementById(id)—document.getElemtById(“purchases”)，将返回一个对象，这个对象对应着document对象的一个独一无二的元素。若页面中多个元素的id值相同，它只返回文档中第一次出现的元素。</li>
+<li>getElemtByTagName方法返回一个对象数组，每个对象分别对应着文档里有着给定标签的一个元素。该方法为Node接口的方法，即任何一个节点都有这个方法//document.getElementsByTagName(“li”).想要获取文档中的所有元素，可以向getElemtByTagName（）中传入“<em>”，例如：<br>var allElements= getElemtByTagName（</em>）;<br>扩展：对象.getElementsByTagName(“标签名”);</li>
+<li>getElemtsByClassName返回一个具有相同类名的数组。//document.getElementsByClassName(“sale”).使用这个方法还可以查找那些带有多个类名的元素，要指定多个类名，只要在字符串参数中用空格分隔类名即可。类名实际顺序不重要。</li>
+<li>getElementByName,最常用是取得单选按钮</li>
+</ol>
+<p>五、    获取和设置属性</p>
+<ol>
+<li>getAttribute方法不属于document对象，不能通过document对象调用，只能通过元素节点对象调用。//object.getAttrbute(attribute)例如<br>var paras=document.getElementsByTagName(“p”);<br>for(var i=0;i&lt;paras.length;i++)<br>alert(paras[i].getAttrbute(“title”));</li>
+<li>setAttribute允许我们对属性节点的值做出修改。<br>Var shopping=document.getElementById(“purchases”);<br>Shopping.setAttribute(“title”,”a list of good”);<br>若某个属性原先并不存在，setAttribute实际完成两项操作，先创建这个属性，然后设置它的值。如果它用子啊一个本身就有这个属性的元素节点上，这个属性的值就会被覆盖掉。<br>六、    this的使用</li>
+</ol>
+<p>一般this出现在函数里时，只有在函数执行时才能确定this是什么，因为this是指那个调用这个函数的对象。比如说有如下方法：<br>    function test(){<br>            alert(this.length);<br>    }<br>则，如下调用：<br>    var str = new String(“test”);<br>    str.test = test;<br>    str.test();<br>此时的this就是字符串str，则调用过程弹出this的长度，实际就是弹出这里的str的长度，所以结果是</p>
+<ol start="4">
+<li>Document.images获取img对象//数组<br>Document.links获取链接对象//数组<br>Document.form获取表单对象//数组<br>Event：事件对象<br>Id-&gt;this-&gt;event,标签<h1 id="3-事件-1"><a href="#3-事件-1" class="headerlink" title="3    事件"></a>3    事件</h1></li>
+</ol>
+<p><strong>3.1    Javascript有三种事件类型：内敛模型，脚本模型，DOM2模型</strong></p>
+<pre><code>window.onload = function() {
+
+        var input = document.getElementsByTagName(&quot;input&quot;)[0];
+        input.onclick = box; //赋值不能加括号
+        //让时间处理函数执行一个函数的时候，通过赋值方式，那么直接将函数名复制给事件处理
+        //也就是说input.onclick=box;如果加上括号就自动执行了，没有完成赋值 input.onclick=box;
+        //PS：可以放在外面，也可以和input同级            
+    }
+
+    function box() {
+        alert(&quot;lee&quot;);
+    }
+    //  &lt;input type=&quot;button&quot; value=&quot;按钮&quot; onclick=&quot;box()&quot;&gt;
+&lt;/script&gt;
+&lt;body&gt;
+&lt;input type=&quot;button&quot; value=&quot;按钮&quot;&gt;
+&lt;/body&gt;</code></pre><p><strong>3.2    事件处理函数：</strong><br>Javascript可以处理的时间类型为：鼠标事件、键盘事件、HTML事件</p>
+<p><strong>3.3    鼠标事件：</strong><br>    window.onload = function() {</p>
+<pre><code>        var input = document.getElementsByTagName(&quot;input&quot;)[0];
+        鼠标单击事件
+        input.onclick = function() {
+
+                alert(&quot;lee&quot;);
+            }
+            //鼠标双击事件
+        input.ondblclick = function() {
+
+                alert(&quot;lee&quot;);
+            }
+            //mousedown当用户按下了鼠标还未谈起时触发
+        input.onmousedown = function() {
+                alert(&quot;lee&quot;);
+            }
+            //mouseover鼠标移上去的时候触发
+        input.onmousemove = function() {
+
+                alert(&quot;lee&quot;);
+            }
+            //mouseout鼠标移开的时候触发
+        input.onmouseout = function() {
+
+            alert(&quot;lee&quot;);
+        }
+    }
+&lt;body&gt;
+    &lt;input type=&quot;button&quot; value=&quot;按钮&quot;&gt;
+&lt;/body&gt;</code></pre><p><strong>3.4    键盘事件：</strong><br>    window.onload = function() {</p>
+<pre><code>    var input = document.getElementsByTagName(&quot;input&quot;)[0];
+    //keypress:当用户按下键盘上的字符键触发，如果按不住会重复触发
+    input.onkeypress = function() {
+
+            alert(&quot;lee&quot;);
+        }
+        //keyup：当用户释放键盘上的键触发
+    input.onkeyup = function() {
+            alert(&quot;lee&quot;);
+        }
+        //key
+    input.onkeydown = function() {
+        alert(&quot;lee&quot;);
+    }
+}</code></pre><p><strong>3.5    HTML事件</strong></p>
+<pre><code>&lt;script&gt;
+        window.onload = function() {
+
+            var form = document.getElementsByTagName(&quot;form&quot;)[0];
+            form.onsubmit = function() {
+                alert(&quot;lee&quot;);
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;form action=&quot;&quot;&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;</code></pre><p><strong>3.6    事件对象：</strong></p>
+<pre><code>          window.onload = function() {
+        //当鼠标在areaDiv中移动时，在showMsg中来显示鼠标的坐标
+        //获取两个div
+        var areaDiv = document.getElementById(&quot;areaDiv&quot;);
+        var showMsg = document.getElementById(&quot;showMsg&quot;);
+        //事件对象：事件响应函数被触发时，浏览器每次都会将一个事件对象作为实参传递进响应函数
+        //在事件对象中封装了当前事件相关的一切信息，比如，鼠标的坐标，键盘哪个按键被按下，鼠标滚轮滚动的方向
+
+        //onmousemove
+        areaDiv.onmousemove = function(event) {
+
+            //解决浏览器兼容性问题
+            if (event)
+                event = window.event;
+            //event=event||window.event;
+
+             //clientX可以获取鼠标指针的水平坐标
+            var x = event.clientX;
+            var y = event.clientY;
+            showMsg.innerHTML = &quot;x=&quot; + x + &quot;,&quot; + &quot;y=&quot; + y;
+        }
+    }
+&lt;/script&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;areaDiv&quot;&gt; &lt;/div&gt;
+    &lt;div id=&quot;showMsg&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;</code></pre><p>3<strong>.7    给整个文档添加鼠标移动事件</strong><br>    <style><br>        #box1 {<br>            width: 100px;<br>            height: 100px;<br>            background-color: red;<br>            /*  要对定位做出设置，才会刷新box1的位置  */<br>            position: absolute;<br>        }<br>    </style><br><br>    <script><br>        window.onload = function() {<br>            //box1跟着鼠标移动<br>            //给box1加载鼠标移动事件<br>            var box1 = document.getElementById("box1");<br><br>            //box1.onmousemove = function(event)<br>            //要在box1中才会触发onmouesemove事件，<br>            //在box1之外就无法触发事件，所以要给整个文档添加鼠标移动事件<br>            document.onmousemove = function(event) {<br>                //处理兼容性问题<br>                event = event || window.event;<br>                //获取偏移量<br>                var left = event.clientX;<br>                var top = event.clientY;<br><br>                box1.style.left = left + "px";<br>                box1.style.top = top + "px";<br>            }<br>        }<br>    </script><br>    <br><br>    <body><br>        <div id="box1"></div><br>    </body></p>
+<p><strong>3.8    事件的冒泡：</strong></p>
+<pre><code>window.onload = function() {
+        //事件的冒泡（ bubble）：
+        //- 所谓的冒泡指的就是事件的向上传递， 当后代元素上的事件被触发时， 其祖先元素的相同事件也会被触发
+        //在开发中大部分情况是有用的
+        //如果不希望发生生事件冒泡，可以通过事件对象取消冒泡
+
+        //为span添加一个鼠标点击响应函数
+        var s1 = document.getElementById(&quot;s1&quot;);
+        s1.onclick = function(event) {
+                event = event || window.event;
+                //取消冒泡，可以将事件对象的cancelBubble设置为true，即可取消冒泡
+                event.cancelBubble = true;
+                alert(&quot;我是span的响应函数&quot;);
+            }
+            //为div添加一个鼠标点击事件
+        var box1 = document.getElementById(&quot;box1&quot;);
+        box1.onclick = function() {
+                event = event || window.event;
+                //取消冒泡，可以将事件对象的cancelBubble设置为true，即可取消冒泡
+                event.cancelBubble = true;
+                alert(&quot;我是div的响应函数&quot;);
+            }
+            //为documen添加一个鼠标点击事件
+        document.body.onclick = function() {
+
+            alert(&quot;我是documment的响应函数&quot;);
+        }
+
+
+
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;box1&quot;&gt;
+        我是box1
+        &lt;span id=&quot;s1&quot;&gt;我是span&lt;/span&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre><p><strong>3.9    事件的委派：</strong><br>    <script><br>        window.onload = function() {<br>            var btn = document.getElementById("btn");<br>            btn.onclick = function() {<br>                var newNode = document.createElement("li");<br>                newNode.innerHTML = "<a href='#' class='link'>新创建的超链接</a>";<br>                var ul = document.getElementsByTagName("ul")[0];<br>                ul.appendChild(newNode);</p>
+<pre><code>        }
+
+        /* 为每一个超链接都绑定一个单机响应函数
+        这里我们为一个超链接绑定一个单机响应函数，
+        这种操作比较麻烦，而且这些操作只能为已有的超链接设置事件，二新添加的超链接必须重新绑定 */
+
+        var aNodes = document.getElementsByTagName(&quot;a&quot;);
+        /*   for (var i = 0; i &lt; aNodes.length; i++) {
+              aNodes[i].onclick = function() {
+                  alert(&quot;我是a的单机响应函数&quot;);
+
+              }
+          } */
+        //我们希望， 之绑定一次事件， 即可运用到多个的元素上， 机试元素是后添加的， 我们可以尝试将其绑定给元素的共同的祖先元素
+        /* 事件的委派：
+        -指将事件同意绑定给元素的共同的祖先元素，这样会当后代元素上的事件触发时，
+          会一直冒泡到祖先元素，从而通过祖先元素的响应函数来处理事件
+        --事件委派是利用了冒泡，通过委派可以减少事件绑定的次数，提高程序的性能
+         */
+        var ul = document.getElementsByTagName(&quot;ul&quot;)[0];
+        ul.onclick = function(event) {
+            event = event || window.event;
+            /*
+            target
+            -event中的target表示的触发事件的对象
+            */
+
+            //如果触发事件是我们期望的元素，则执行，否则不执行
+            var reg = /^link\s*/;
+            if (reg.test(event.target.className) == true)
+            //alert(event.target);
+                alert(&quot;我是ul的单击响应函数&quot;);
+        }
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;button id=&quot;btn&quot;&gt;点击添加链接&lt;/button&gt;
+&lt;ul style=&quot;background-color:red;&quot;&gt;
+    &lt;p&gt;这是一段文字&lt;/p&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link hello&quot;&gt;这是超链接一&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;这是超链接二&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;这是超链接三&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;/body&gt;</code></pre><p><strong>3.10    事件的绑定：</strong><br>    <script><br>        window.onload = function() {<br>            //点击按钮输出内容</p>
+<pre><code>        /* 使用对象.事件=函数的形式绑定响应函数
+        它只能同时为一个元素的一个事件绑定一个响应函数
+        不能绑定多个，如果绑定了多个，则后边会覆盖掉前边的
+         */
+        var btn = document.getElementById(&quot;btn&quot;);
+        //添加第一个响应函数
+        /*  btn.onclick = function() {
+                 alert(&quot;1&quot;);
+             }
+             //添加第二个响应函数
+         btn.onclick = function() {
+
+             alert(&quot;2&quot;);
+         }
+          */
+        /* 
+        addEventLisener()
+        - 通过这个方法也可以为元素绑定响应函数
+        - 参数：
+                1、事件的字符串，不要on
+                2、回调函数，当事件触发时该函数会被调用
+                3、是否在捕获阶段触发事件，需要一个布尔值，一般都传false
+                使用adEventLisenter（）同时可以为一个元素的相同事件同时绑定多个响应函数，
+                这样当事件被触发时，响应函数会按照函数的顺序执行
+                这个方法不支持IE8一下的浏览器
+         */
+        /*   btn.addEventListener(&quot;click&quot;, function() {
+              alert(&quot;1&quot;);
+          }, false);
+          btn.addEventListener(&quot;click&quot;, function() {
+              alert(&quot;2&quot;);
+          }, false); */
+        /* attachEvent()
+        - 在IE8中可以使用attachEvent（）来绑定事件
+        - 参数：
+                1、时间字符串，要on
+                2、回调函数 
+        该方法也可以为一个事件绑定多个处理函数
+        不同的是它是后绑定先执行，执行顺序与addEventListener相反
+         */
+        btn.attachEvent(&quot;onclick&quot;, function() {
+            alert(&quot;1&quot;);sd
+        })
+        btn.attachEvent(&quot;onclick&quot;, function() {
+            alert(&quot;2&quot;);
+        })
+        btn.attachEvent(&quot;onclick&quot;, function() {
+            alert(&quot;3&quot;);
+        })
+
+        /* 
+        定义一个函数，用来指定元素绑定响应函数
+        addEventListener()中的this，是绑定事件的对象
+        attachEvent()中的this，是window
+        需要统一两个方法的this
+
+        参数：
+            1、obj要绑定的事件的对象
+            2、eventStr事件的字符串
+            3、callback回调函数
+         */
+        function blind(obj, eventStr, callback) {
+        if (obj.addEventListener) {
+            //大部分浏览器兼容的方式
+            obj.addEventListener(eventStr, callback, obj);
+        } else {
+            /* 
+            this 是由调用方式决定的
+            callback.call(obj);
+             */
+            //IE8及以下
+            obj.attachEvent(&quot;on&quot; + eventStr, callback);
+        }
+
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;button id=&quot;btn&quot;&gt;点击按钮输出内容&lt;/button&gt;
+&lt;/body&gt;</code></pre><p><strong>3.11    事件的捕获阶段：</strong><br>        <style><br>        #box1 {<br>            width: 300px;<br>            height: 300px;<br>            background-color: yellowgreen;<br>        }<br><br>        #box2 {<br>            width: 300px;<br>            height: 200px;<br>            background-color: yellow;<br>        }<br><br>        #box3 {<br>            width: 150px;<br>            height: 150px;<br>            background-color: blue;<br>        }<br>    </style><br>    <script><br>        window.onload = function() {<br>            var box1 = document.getElementById("box1");<br>            var box2 = document.getElementById("box2");<br>            var box3 = document.getElementById("box3");<br><br>            /*<br>            事件的传播：<br>            - 关于事件的传播网景公司和微软公司有不同的理解：<br>            - 微软公司认为时间应该是由内向外传播，也就是当事件触发时，应该先触发当前元素上的事件，<br>                然后再向当前元素的祖先元素上传播，也就是说时间应该在冒泡阶段执行。<br>            - 网景公司认为时间应该是由外向内传播的，也就是当前事件触发时，应该先触发当前元素的最外层的祖先元素的事件，<br>                然后在向内传播的后代元素<br>            - W3C综合两个公司的方案，将事件传播分为三个阶段：<br>                1、捕获阶段：<br>                    - 在捕获阶段时从最外层的祖先元素，向目标元素进行事件的捕获，但是默认此时不会触发事件<br>                2、目标阶段：<br>                    - 事件捕获到目标元素，捕获结束开始在目标元素上触发事件<br>                3、冒泡阶段：<br>                    - 事件从目标元素向他的祖先元素传递，依次触发祖先元素上的事件<br>                -如果希望在捕获阶段就触发事件，可以将addEventListener()的第三个参数设置为true。<br>                一般情况下我们不会希望在捕获阶段触发事件，所以这个参数一般都是flase‘<br><br>                IE8及以下的浏览器没有捕获阶段<br>             <em>/<br>            blind(box1, "click", function() {<br>                alert("我是box1的响应函数");<br>            })<br>            blind(box2, "click", function() {<br>                alert("我是box2的响应函数");<br>            })<br>            blind(box3, "click", function() {<br>                alert("我是box3的响应函数");<br>            })<br><br>        }<br><br>        function blind(obj, eventStr, callback) {<br>            if (obj.addEventListener) {<br>                //大部分浏览器兼容的方式<br>                obj.addEventListener(eventStr, callback, obj);<br>            } else {<br>                /</em><br>                this 是由调用方式决定的<br>                callback.call(obj);<br>                 */<br>                //IE8及以下<br>                obj.attachEvent("on" + eventStr, callback);<br>            }<br><br>        }<br>    </script><br>    <br><br>    <body><br>    <div id="box1"><br>        <div id="box2"><br>            <div id="box3"></div><br>        </div><br><br><br>    </div><br>    </body></p>
+<p><strong>3.12    事件之拖拽</strong><br>        <style><br>        #box1 {<br>            width: 100px;<br>            height: 100px;<br>            background-color: red;<br>            position: absolute;<br>        }<br><br>        #box2 {<br>            width: 100px;<br>            height: 100px;<br>            background-color: yellow;<br>            position: absolute;<br>            left: 200px;<br>            top: 200px;<br>        }<br>    </style><br><br>    <script><br>        window.onload = function() {<br>            /*<br>            拖拽box1元素<br>            - 拖拽的流程：<br>                1. 当鼠标在拖拽元素上按下时，开始拖拽 onmousedown<br>                2. 当鼠标移动时被拖拽元素跟随鼠标移动onmousemove<br>                3. 当鼠标松开时，被拖拽元素固定在当前位置onmouseup<br>             <em>/<br>            //获取box1<br>            var box1 = document.getElementById("box1");<br>            // 当鼠标在拖拽元素上按下时，开始拖拽 onmousedown<br>            box1.onmousedown = function(event) {<br>                event = event || window.event;<br>                //调整偏移量<br>                /</em><br>                div偏移量 event.ClinetX鼠标偏移量 - 元素.offsetleft<br>                  div偏移量 event.ClinetY鼠标偏移量 - 元素.offsettop<br>                 */<br>                var ol = event.clientX - box1.offsetLeft;<br>                var ot = event.clientY - box1.offsetTop;<br><br><br>                //当鼠标移动时被拖拽元素跟随鼠标移动onmousemove<br>                //为document绑定一个onmuosemove函数<br>                document.onmousemove = function(event) {<br>                        event = event || window.event;<br><br>                        var left = event.clientX - ol;<br>                        var top = event.clientY - ot;<br>                        //修改box1的位置<br>                        box1.style.left = left + "px";<br>                        box1.style.top = top + "px";<br>                    }<br>                    // 当鼠标松开时，被拖拽元素固定在当前位置onmouseup<br>                document.onmouseup = function() {<br>                    //取消onmousemove事件<br>                    document.onmousemove = null;<br>                    //取消onmouseup事件,若不取消onmouseup还会继续触发，即alert（）会继续执行，但已经没有了执行的必要了<br>                    document.onmouseup = null;<br>                   // alert("鼠标松开了");<br><br>                }<br><br>            }<br><br>        }<br>    </script><br>    <br><br>    <body><br>        <div id="box1"></div><br>        <div id="box2"></div><br>    </body></p>
+<p><strong>3.13    滚轮事件</strong></p>
+<pre><code>&lt;style&gt;
+    #box1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    window.onload = function() {
+        /* 
+        鼠标滚轮向下滚动，box1变长
+        当滚轮向下滚动，box1变短
+         */
+        var box1 = document.getElementById(&quot;box1&quot;);
+        /* 
+        onmousewheel会在滚轮滚动时触发，但火狐不支持该属性
+
+        在火狐中需使用DOMouseScroll来绑定滚动事件
+        注意该函数通过addEventListener（）函数来绑定
+         */
+        box1.onmousewheel = function(event) {
+                event = event || window.event;
+                /*                 
+                event.wheelDelta可以获取滚轮滚动的方向
+                向上滚120，向下滚-120
+                该值我们只关注正负，不关注大小
+
+                但火狐中不支持该属性，在火狐中用event.detail来获取滚轮滚动的方向
+                 */
+                if (event.wheelDelta &gt; 0 || event.wheelDeltail &lt; 0) {
+                    // 鼠标滚轮向下滚动，box1变短
+                    box1.style.height = box1.clientHeight - 10 + &quot;px&quot;;
+                } else
+                //当滚轮向下滚动，box1变长
+                    box1.style.height = box1.clientHeight + 10 + &quot;px&quot;;
+
+                /* 
+                使用addEventListener()方法绑定响应函数，取消默认行为时不能使用return false
+                需使用event来取消默认行为
+                但是IE8不支持，直接调用event.preventDefault()会报错
+                 */
+                event.preventDefault() &amp;&amp; event.preventDefault();
+                /* 
+                           当滚轮滚动时，如浏览器有滚动条，滚动条会随之滚动
+                           这是浏览器的默认行为，如果不希望发生，则可以取消默认行为
+                            */
+                return false;
+            }
+            //为火狐绑定滚轮事件
+        bind(box1, &quot;DOMMouseScroll&quot;, function() {
+            if (event.wheelDelta &gt; 0 || event.wheelDeltail &lt; 0) {
+                    // 鼠标滚轮向下滚动，box1变短
+                    box1.style.height = box1.clientHeight - 10 + &quot;px&quot;;
+                } else
+                //当滚轮向下滚动，box1变长
+                    box1.style.height = box1.clientHeight + 10 + &quot;px&quot;;
+        })
+    }
+
+    function blind(obj, eventStr, callback) {
+        if (obj.addEventListener) {
+            //大部分浏览器兼容的方式
+            obj.addEventListener(eventStr, callback, obj);
+        } else {
+            /* 
+            this 是由调用方式决定的
+            callback.call(obj);
+             */
+            //IE8及以下
+            obj.attachEvent(&quot;on&quot; + eventStr, callback);
+        }
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body style=&quot;height: 2000px;&quot;&gt;
+    &lt;div id=&quot;box1&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;</code></pre><p><strong>3.14    键盘事件</strong></p>
+<pre><code>&lt;style&gt;
+    #box1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    window.onload = function() {
+        /* 
+        使div可以根据不同的方向移动
+        左键 div左移
+        右键 div右移
+
+         */
+        document.onkeydown = function(event) {
+            event = event || window.event;
+            var speed = 20;
+            if (event.ctrlKey) {
+                speed = 50;
+            }
+
+            /* 
+            37左
+            39右
+            38上
+            40下
+             */
+            switch (event.keyCode) {
+                case 37:
+                    box1.style.left = box1.offsetLeft - speed + &quot;px&quot;;
+                    break;
+                case 39:
+                    box1.style.left = box1.offsetLeft + speed + &quot;px&quot;;
+                    break;
+                case 38:
+                    box1.style.top = box1.offsetTop - speed + &quot;px&quot;;
+                    break;
+
+                case 40:
+                    box1.style.top = box1.offsetTop + speed + &quot;px&quot;;
+                    break;
+            }
+        }
+
+    }
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;box1&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持miaomiao</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2019/01/26/抽象方法/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2019/02/04/servlet映射路径/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="https://valeriehu1995.github.io/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
