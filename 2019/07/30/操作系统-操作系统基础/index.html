@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>操作系统 | PPPig1994</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="project,">
+  
+
+  <meta name="description" content="操作系统基础L1什么是操作系统1.1学习操作系统的层次应用程序————————操作系统————————计算机硬件—————————  从应用软件触发“探到操作系统”：集中在使用计算机的接口上，使用显示器（printf），使用CPU（fork），使用文件（open，read）   从应用软件到“进入操作系统”：一段文字是如何写到磁盘上的   从硬件触发“涉及并实现操作系统”：给你一个板子，配一个操作">
+<meta name="keywords" content="project">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统">
+<meta property="og:url" content="https://pppig1994.github.io/2019/07/30/操作系统-操作系统基础/index.html">
+<meta property="og:site_name" content="PPPig1994">
+<meta property="og:description" content="操作系统基础L1什么是操作系统1.1学习操作系统的层次应用程序————————操作系统————————计算机硬件—————————  从应用软件触发“探到操作系统”：集中在使用计算机的接口上，使用显示器（printf），使用CPU（fork），使用文件（open，read）   从应用软件到“进入操作系统”：一段文字是如何写到磁盘上的   从硬件触发“涉及并实现操作系统”：给你一个板子，配一个操作">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-05T04:32:28.677Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="操作系统">
+<meta name="twitter:description" content="操作系统基础L1什么是操作系统1.1学习操作系统的层次应用程序————————操作系统————————计算机硬件—————————  从应用软件触发“探到操作系统”：集中在使用计算机的接口上，使用显示器（printf），使用CPU（fork），使用文件（open，read）   从应用软件到“进入操作系统”：一段文字是如何写到磁盘上的   从硬件触发“涉及并实现操作系统”：给你一个板子，配一个操作">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-38189205-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+</head>
+</html>
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/categories"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tags"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="https://valeriehu1995.github.io/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#操作系统基础"><span class="toc-text">操作系统基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#L1什么是操作系统"><span class="toc-text">L1什么是操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1学习操作系统的层次"><span class="toc-text">1.1学习操作系统的层次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2操作系统管理哪些硬件："><span class="toc-text">1.2操作系统管理哪些硬件：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#L2开始揭开钢琴的盖子（bootsect故事）"><span class="toc-text">L2开始揭开钢琴的盖子（bootsect故事）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#L3操作系统的启动"><span class="toc-text">L3操作系统的启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#L4操作系统接口"><span class="toc-text">L4操作系统接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#L5系统调用的实现"><span class="toc-text">L5系统调用的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#L6操作系统历史"><span class="toc-text">L6操作系统历史</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-操作系统-操作系统基础" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">操作系统</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.07.30</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>PPPig</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/work/">work</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="操作系统基础"><a href="#操作系统基础" class="headerlink" title="操作系统基础"></a>操作系统基础</h1><h2 id="L1什么是操作系统"><a href="#L1什么是操作系统" class="headerlink" title="L1什么是操作系统"></a>L1什么是操作系统</h2><h3 id="1-1学习操作系统的层次"><a href="#1-1学习操作系统的层次" class="headerlink" title="1.1学习操作系统的层次"></a>1.1学习操作系统的层次</h3><p>应用程序<br>————————<br>操作系统<br>————————<br>计算机硬件<br>—————————</p>
+<ul>
+<li>从应用软件触发“探到操作系统”：集中在使用计算机的接口上，使用显示器（printf），使用CPU（fork），使用文件（open，read）  </li>
+<li>从应用软件到“进入操作系统”：一段文字是如何写到磁盘上的  </li>
+<li>从硬件触发“涉及并实现操作系统”：给你一个板子，配一个操作系统  </li>
+</ul>
+<p>学习目标：改CPU管理，改屏幕输出，改系统接口，改内存管理</p>
+<h3 id="1-2操作系统管理哪些硬件："><a href="#1-2操作系统管理哪些硬件：" class="headerlink" title="1.2操作系统管理哪些硬件："></a>1.2操作系统管理哪些硬件：</h3><p><a href>CPU管理</a><br><a href>内存管理</a><br><a href>终端管理</a><br><a href>磁盘管理</a><br><a href>文件管理</a><br><strong>网络管理</strong><br><strong>电源管理</strong><br><strong>多核管理</strong></p>
+<h2 id="L2开始揭开钢琴的盖子（bootsect故事）"><a href="#L2开始揭开钢琴的盖子（bootsect故事）" class="headerlink" title="L2开始揭开钢琴的盖子（bootsect故事）"></a>L2开始揭开钢琴的盖子（bootsect故事）</h2><p>白纸-&gt;图灵机-&gt;通用图灵机-&gt;计算机<br>（厨师-&gt;看菜谱-&gt;做菜肴）</p>
+<ol>
+<li>计算机开机时的第一条代码 pc=？<br>一个扇区512字节</li>
+<li>0磁道0扇区：引导扇区，将计算机引导到第一条代码执行<br>引导扇区代码：bootsect.s<br>开机后：打出logo，读入setup模块，再把其他代码读入</li>
+</ol>
+<p>启动盘：boot扇区|setup的4个扇区|system模块（os代码）</p>
+<h2 id="L3操作系统的启动"><a href="#L3操作系统的启动" class="headerlink" title="L3操作系统的启动"></a>L3操作系统的启动</h2><ol>
+<li><p>setup模块，即setup.s,将完成os启动前的设置</p>
+</li>
+<li><p>进入保护模式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jump <span class="number">0</span>,<span class="number">8</span>  <span class="comment">//gdt中的8，gdt(global description table)</span></span><br><span class="line">，jmp到内存<span class="number">0x0000</span>处</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>跳到system模块执行：</p>
+</li>
+</ol>
+<ul>
+<li>system模块（目标代码）中的第一部分代码？</li>
+</ul>
+<p><strong>head.s</strong>//一段在保护模式下运行的代码</p>
+<ol start="4">
+<li>进去main函数，作初始化<br>计算机开机：bootsect.s将磁盘读入-&gt;setup获得参数启动保护模式-&gt;head初始化gdt页表-&gt;main初始化（men_init()）<br>总结为两个过程：读入内存（将操作系统读到内存，操作系统才可以取址执行），初始化（初始化一些硬件参数）</li>
+</ol>
+<h2 id="L4操作系统接口"><a href="#L4操作系统接口" class="headerlink" title="L4操作系统接口"></a>L4操作系统接口</h2><ol>
+<li>接口概念：</li>
+<li>用户使用计算机：命令行，图形按钮，应用程序</li>
+</ol>
+<ul>
+<li>命令行，命令：一个用C语言写的程序而已（调用某些关键的函数）</li>
+<li>图像按钮：一个包括画图的C程序</li>
+</ul>
+<p>用户使用计算机：通过<strong>程序</strong>（应用软件）<br>操作系统接口：连接谁？链接操作系统和应用软件，如何连接？C语言程序（普通C代码加上一些重要的函数）<br>所以操作系统提供这样的重要函数<br>操作系统接口：接口表现为战术调用，又由系统提供，所以称为系统调用</p>
+<p>POSIX: Portable Operating System Interface of Unix(IEEE制定的一个标准族)，统一的系统调用接口</p>
+<p>| 分类  |posix定义 |描述<br>|        |fork     |创建一个进程<br>|任务管理|excel    |运行一个可执行程序<br>|       |pathread_create|创建一个线程<br>|文件系统|open|打开一个文件或目录</p>
+<p>什么是操作系统接口-&gt;系统调用-&gt;posix-&gt;fork,excel等函数</p>
+<h2 id="L5系统调用的实现"><a href="#L5系统调用的实现" class="headerlink" title="L5系统调用的实现"></a>L5系统调用的实现</h2><ol>
+<li>内核（用户）态，内核（用户）段<br>区分内核态和用户态:一种处理器的”引进概念设计“<br>处理器保护环：</li>
+</ol>
+<p>核心态（0）-&gt;os服务（1，2）-&gt;用户态（3）<br>当前程序执行在什么态（哪层环？）由于CS：IP是当前指令，所以用CS的最低两位来标识：0是内核态，3是用户态</p>
+<ul>
+<li>内核态可以访问任何数据，用户态不能访问内核数据</li>
+<li>对于指令跳转也一样实现了隔离</li>
+</ul>
+<p>CPL(CS)<br>———————<br>RPL(DS)访问的数据段DS的最低两位    ———&gt;检查（DPL&gt;CPL,DPL&gt;RPL）<br>————————<br>DPL<br>————————  </p>
+<p>内核态：DPL= 0，<br>用户态：CPL=3.    </p>
+<ol start="2">
+<li>硬件提供了“主动进入内核的方法”</li>
+</ol>
+<ul>
+<li>对于Intel x86，就是终端指令int：int指令将CS中的CPL改成0，“进入内核态”</li>
+<li>系统调用的核心：</li>
+</ul>
+<p>【1】用户程序中包含一段包含<strong>int指令</strong>的代码（库函数）<br>【2】操作系统写中断处理，获取想调程序的编号<br>【3】操作系统根据编号执行相应代码  </p>
+<ol start="3">
+<li>系统调用的实现</li>
+</ol>
+<p>【应用程序】调用printf(…)-&gt;【c函数库】库函数printf(…)-&gt;库函数write(…)-&gt;【OS内核】系统调用write(…)</p>
+<p>最终稿展开成包含int指令的代码</p>
+<ol start="4">
+<li>int Ox80中断的处理:取出IDT表的中断处理函数，跳到目标地址执行，中断结束后继续执行原来的代码<br>中断处理程序：system_call</li>
+</ol>
+<p>【用户态】用户调用printf-&gt;【用户态,CPL<br>=3,DPL=3】printf展成int 0x80-&gt;【内核态,CPL=0】中断处理system_call-&gt;【内核态】查表system_call_table-&gt;【内核态】__NP_write=4-&gt;【内核态】调用sys_write</p>
+<h2 id="L6操作系统历史"><a href="#L6操作系统历史" class="headerlink" title="L6操作系统历史"></a>L6操作系统历史</h2><p><a href="!https://graph.baidu.com/resource/1128034e52c885e82e76401564977104.jpg"></a><br>任务：掌握、实现操作系统的多进程图谱<br>掌握、实现操作系统的额文件操作视图</p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持miaomiao</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2019/07/29/专程赛事项目/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/categories"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tags"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="https://valeriehu1995.github.io/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
