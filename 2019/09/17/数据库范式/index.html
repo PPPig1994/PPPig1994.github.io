@@ -7,26 +7,26 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>需求调研tips | PPPig1994</title>
+  <title>数据库范式 | PPPig1994</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="project,">
+    <meta name="keywords" content="database,">
   
 
-  <meta name="description" content="需求调研以后，就要进行需求整理。收集到的需求都是分散的，可使用XMind（或者MindManager）软件绘制思    维导图，进行简单的逻辑整理，把相关的业务或者功能进行分类，然后再细化模块，采用 分-总-分的模式。    需求整理分类以后，要开始归类划分，学会区分真假需求。学会判别需求以及拒绝不必要的需求。    竞品分析：做竞品分析的常用方法：体验法：深度体验，截图保存对比法：功能对比法，">
-<meta name="keywords" content="project">
+  <meta name="description" content="1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。2NF如果关系模式R是1NF，且每一个非主属性完全依赖于候选建，那么就称R是第二范式。第二范式要满足的条件：首先要满足第一范式，其次每一个非主属性要完全函数依赖于候选键，或者是主键。也就是说，每个非主属性是由整个主键函数决定的，而不能有主键的一部分来决定。 若出现部分依赖则不满足第二范式 https://im">
+<meta name="keywords" content="database">
 <meta property="og:type" content="article">
-<meta property="og:title" content="需求调研tips">
-<meta property="og:url" content="https://pppig1994.github.io/2019/07/29/需求调研/需求调研tips/index.html">
+<meta property="og:title" content="数据库范式">
+<meta property="og:url" content="https://pppig1994.github.io/2019/09/17/数据库范式/index.html">
 <meta property="og:site_name" content="PPPig1994">
-<meta property="og:description" content="需求调研以后，就要进行需求整理。收集到的需求都是分散的，可使用XMind（或者MindManager）软件绘制思    维导图，进行简单的逻辑整理，把相关的业务或者功能进行分类，然后再细化模块，采用 分-总-分的模式。    需求整理分类以后，要开始归类划分，学会区分真假需求。学会判别需求以及拒绝不必要的需求。    竞品分析：做竞品分析的常用方法：体验法：深度体验，截图保存对比法：功能对比法，">
+<meta property="og:description" content="1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。2NF如果关系模式R是1NF，且每一个非主属性完全依赖于候选建，那么就称R是第二范式。第二范式要满足的条件：首先要满足第一范式，其次每一个非主属性要完全函数依赖于候选键，或者是主键。也就是说，每个非主属性是由整个主键函数决定的，而不能有主键的一部分来决定。 若出现部分依赖则不满足第二范式 https://im">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-01T08:31:23.469Z">
+<meta property="og:updated_time" content="2019-09-17T13:58:52.416Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="需求调研tips">
-<meta name="twitter:description" content="需求调研以后，就要进行需求整理。收集到的需求都是分散的，可使用XMind（或者MindManager）软件绘制思    维导图，进行简单的逻辑整理，把相关的业务或者功能进行分类，然后再细化模块，采用 分-总-分的模式。    需求整理分类以后，要开始归类划分，学会区分真假需求。学会判别需求以及拒绝不必要的需求。    竞品分析：做竞品分析的常用方法：体验法：深度体验，截图保存对比法：功能对比法，">
+<meta name="twitter:title" content="数据库范式">
+<meta name="twitter:description" content="1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。2NF如果关系模式R是1NF，且每一个非主属性完全依赖于候选建，那么就称R是第二范式。第二范式要满足的条件：首先要满足第一范式，其次每一个非主属性要完全函数依赖于候选键，或者是主键。也就是说，每个非主属性是由整个主键函数决定的，而不能有主键的一部分来决定。 若出现部分依赖则不满足第二范式 https://im">
 
   
 
@@ -183,17 +183,22 @@ ga('send', 'pageview');
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。"><span class="toc-text">1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2NF"><span class="toc-text">2NF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3NF"><span class="toc-text">3NF</span></a></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
-   <article id="post-需求调研/需求调研tips" class="article article-type-post" itemprop="blogPost">
+   <article id="post-数据库范式" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">需求调研tips</h1>
+    <h1 class="post-title">数据库范式</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2019.07.29</span>
+        <span>2019.09.17</span>
       </span>
 
       
@@ -206,7 +211,7 @@ ga('send', 'pageview');
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/project/">project</a>
+    <a class="article-category-link" href="/categories/database/">database</a>
   </span>
 
 
@@ -226,17 +231,12 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <ol>
-<li>需求调研以后，就要进行需求整理。收集到的需求都是分散的，可使用XMind（或者MindManager）软件绘制思  </li>
-</ol>
-<p>维导图，进行简单的逻辑整理，把相关的业务或者功能进行分类，然后再细化模块，采用 分-总-分的模式。  </p>
-<ol start="2">
-<li><p>需求整理分类以后，要开始归类划分，学会区分真假需求。学会判别需求以及拒绝不必要的需求。  </p>
-</li>
-<li><p>竞品分析：<br>做竞品分析的常用方法：<br>体验法：深度体验，截图保存<br>对比法：功能对比法，编制表格<br>回溯法：关注功能上线时间和消失时间<br>SWTO：优劣势分析<br>MECE：互相独立，完全穷尽<br>空雨伞：麦肯锡分析方法，现状、意义、解决方案</p>
-</li>
-<li></li>
-</ol>
+      <h2 id="1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。"><a href="#1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。" class="headerlink" title="1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。"></a>1NF：如果关系模式R是第一范式的模式，那么，R的每一个关系r的属性都是原子项，不可分割。</h2><h2 id="2NF"><a href="#2NF" class="headerlink" title="2NF"></a>2NF</h2><p>如果关系模式R是1NF，且每一个非主属性完全依赖于候选建，那么就称R是第二范式。<br>第二范式要满足的条件：首先要满足第一范式，其次每一个非主属性要完全函数依赖于候选键，或者是主键。也就是说，每个非主属性是由整个主键函数决定的，而不能有主键的一部分来决定。</p>
+<p><strong>若出现部分依赖则不满足第二范式</strong></p>
+<p><a href="https://img-blog.csdn.net/20151002152345014?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" target="_blank" rel="noopener">https://img-blog.csdn.net/20151002152345014?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast</a></p>
+<p>因为（学生，课程）-&gt;教材，但 课程-&gt;教材，出现部分依赖，则不满足第二范式<br>解决办法：分解。进行投影分解：<br><a href="https://img-blog.csdn.net/20151002153453910?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" target="_blank" rel="noopener">https://img-blog.csdn.net/20151002153453910?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast</a><br><a href="https://img-blog.csdn.net/20151002153453910?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" target="_blank" rel="noopener">https://img-blog.csdn.net/20151002153453910?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast</a></p>
+<h2 id="3NF"><a href="#3NF" class="headerlink" title="3NF"></a>3NF</h2><p>如果关系模型R是第二范式，且每个非主属性都不传递依赖于R的候选键，则称R是第三范式的模式。</p>
+<p>以学生表(学号，姓名，课程号，成绩)为例，其中学生姓名无重名，所以该表有两个候选码(学号，课程号)和(姓名，课程号)，故存在函数依赖：学号——&gt;姓名，(学号，课程号)——&gt;成绩，唯一的非主属性成绩对码不存在部分依赖，也不存在传递依赖，所以属性属于第三范式。</p>
 
     
   </div>
@@ -274,10 +274,10 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2019/07/29/能力中台回顾/">
+    <a class="show pull-left" href="/2019/08/13/需求调研/中台/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2019/07/29/需求调研/原型涉及tips/">
+    <a class="show pull-right" href="/2019/09/21/需求调研/计算机网络开学考回忆/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
