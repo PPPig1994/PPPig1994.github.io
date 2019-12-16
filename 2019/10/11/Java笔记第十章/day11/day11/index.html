@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>PPPig1994</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript">
+  
+
+  <meta name="description" content="JSP  什么是JSPJSP即java server pages，它是JavaWeb的动态资源。JSP = html + java脚本 + jsp动作标签(包含EL表达式)  JSP中java脚本  &amp;lt;% … %&amp;gt;：代码段，Java语句 &amp;lt;%= … %&amp;gt;：表达式，只是表达式！表达式的值会被输出到客户端 &amp;lt;%! … %&amp;gt;：定义，定义成员！例如例如成员变量，方法等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PPPig1994">
+<meta property="og:url" content="https://pppig1994.github.io/2019/10/11/Java笔记第十章/day11/day11/index.html">
+<meta property="og:site_name" content="PPPig1994">
+<meta property="og:description" content="JSP  什么是JSPJSP即java server pages，它是JavaWeb的动态资源。JSP = html + java脚本 + jsp动作标签(包含EL表达式)  JSP中java脚本  &amp;lt;% … %&amp;gt;：代码段，Java语句 &amp;lt;%= … %&amp;gt;：表达式，只是表达式！表达式的值会被输出到客户端 &amp;lt;%! … %&amp;gt;：定义，定义成员！例如例如成员变量，方法等">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-11T11:54:01.926Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PPPig1994">
+<meta name="twitter:description" content="JSP  什么是JSPJSP即java server pages，它是JavaWeb的动态资源。JSP = html + java脚本 + jsp动作标签(包含EL表达式)  JSP中java脚本  &amp;lt;% … %&amp;gt;：代码段，Java语句 &amp;lt;%= … %&amp;gt;：表达式，只是表达式！表达式的值会被输出到客户端 &amp;lt;%! … %&amp;gt;：定义，定义成员！例如例如成员变量，方法等">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-38189205-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+</head>
+</html>
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/categories"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tags"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="https://valeriehu1995.github.io/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">================================</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-1"><span class="toc-text">=============================</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Java笔记第十章/day11/day11" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.10.11</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>PPPig</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>JSP</p>
+<ol>
+<li><p>什么是JSP<br>JSP即java server pages，它是JavaWeb的动态资源。<br>JSP = html + java脚本 + jsp动作标签(包含EL表达式)</p>
+</li>
+<li><p>JSP中java脚本</p>
+<ul>
+<li>&lt;% … %&gt;：代码段，Java语句</li>
+<li>&lt;%= … %&gt;：表达式，只是表达式！表达式的值会被输出到客户端</li>
+<li>&lt;%! … %&gt;：定义，定义成员！例如例如成员变量，方法等</li>
+</ul>
+</li>
+</ol>
+<p>&lt;%<br>  int a = 10;//定义变量<br>%&gt;<br>&lt;%<br>  out.println(a);//输出变量<br>%&gt;<br>&lt;%=a%&gt;//输出变量<br>&lt;%!<br>  private String hello = “world”;<br>  public String sayHello() {<br>    return hello;<br>  }<br>%&gt;<br>&lt;%=sayHello()%&gt;</p>
+<hr>
+<ol start="4">
+<li><p>JSP真身</p>
+<ul>
+<li>JSP也是Servlet</li>
+<li>JSP会在第一次被请求时编码成.java，再编码成.class文件，它其实就是一个Servlet，在处理请求时执行service()方法。</li>
+</ul>
+<p>查看真身可以得到，jsp中有9个对象可以无需创建即可使用，它们就是jsp九大内置对象。</p>
+</li>
+</ol>
+<hr>
+<ol start="5">
+<li><p>JSP注释</p>
+<ul>
+<li><!-- -->，html注释，不是JSP注释，它会出现在JSP的真身中，并发送到客户端，但客户端浏览器不会显示它。</li>
+<li>&lt;%– –%&gt;，JSP注释，它不会出现在JSP真身中，也就不可能发送到客户端浏览器了。</li>
+</ul>
+</li>
+</ol>
+<h1 id><a href="#" class="headerlink" title="================================"></a>================================</h1><p>================================</p>
+<p>会话跟踪</p>
+<ol>
+<li><p>什么是会话</p>
+<ul>
+<li>用户拨打10086，从服务台接通后会话开始；</li>
+<li>用户发出话费查询请求，服务台响应。这是该会话中的一个请求；</li>
+<li>用户发出套餐变更请求，服务台响应。这是该会话中的又一个请求；</li>
+<li>…</li>
+<li>用户挂断电话，会话结束。</li>
+</ul>
+</li>
+<li><p>会话的特性</p>
+<ul>
+<li>一个会话中可能包含多个请求；</li>
+<li>一个会话中发出请求的用户是唯一的；</li>
+</ul>
+</li>
+<li><p>JavaWeb会话</p>
+<ul>
+<li>从用户打开本站第一个页面开始，会话也开始了；</li>
+<li>用户会发出0~n个请求；</li>
+<li>用户关闭浏览器会话结束了。</li>
+</ul>
+</li>
+<li><p>什么是会话跟踪技术<br>HTTP是无状态协议，也就是没有记忆力的协议，每个请求之间无法共享数据。这就无法知道会话什么时候开始，什么时候结束，也无法确定发出请求的用户身份。这说明需要使用额外的手段来跟踪会话！</p>
+<ul>
+<li>在一个会话中共享数据即会话跟踪技术</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>Cookie</p>
+<ol>
+<li>什么是Cookie</li>
+</ol>
+<ul>
+<li>Cookie是HTTP协议的规范之一，它是服务器和客户端之间传输的小数据。</li>
+<li>首先由服务器通过响应头把Cookie传输给客户端，客户端会将Cookie保存起来。</li>
+<li>当客户端再次请求同一服务器时，客户端会在请求头中添加该服务器保存的Cookie，发送给服务器。</li>
+<li>Cookie就是服务器保存在客户端的数据！</li>
+<li>Cookie就是一个键值对！！！</li>
+</ul>
+<ol start="2">
+<li>Cookie规范</li>
+</ol>
+<ul>
+<li>Cookie通过请求头和响应头在服务器与客户端之间传输；</li>
+<li>Cookie大小限制在4KB之内；</li>
+<li>一台服务器在一个客户端最多保存20个Cookie；</li>
+<li>一个浏览器最多可以保存300个Cookie；</li>
+</ul>
+<p>虽然Cookie规范是如此，但在今天，浏览器厂商的竞争异常激烈，所以多少会超出Cookie规则的限制。但也不会超出过多！</p>
+<ol start="3">
+<li>Cookie与请求头和响应头</li>
+</ol>
+<ul>
+<li>服务器向客户端发送Cookie的响应头为Set-Cookie，例如：Set-Cookie:cookiename=cookievalue</li>
+<li>客户端向服务器发送Cookie的请求头为Cookie，例如：Cookie:cookiename=cookievalue</li>
+</ul>
+<ol start="4">
+<li><p>Servlet中向客户端发送Cookie<br>Cookie cookie1 = new Cookie(“test1”, “abcdefg”);<br>Cookie cookie2 = new Cookie(“test2”, “ABCDEFG”);<br>response.addCookie(cookie1);<br>response.addCookie(cookie2);</p>
+</li>
+<li><p>Servlet中获取客户端发送过来的Cookie</p>
+<p>Cookie[] cs = request.getCookies();<br>if(cs != null) {<br> for(Cookie c : cs) {<br>   System.out.println(c.getName() + “=” + c.getValue());<br> }<br>}</p>
+</li>
+</ol>
+<p>=============================</p>
+<p>Cookie的细节</p>
+<ol>
+<li><p>Cookie的maxAge<br>当服务器创建Cookie对象后，可以调用setMaxAge()方法设置Cookie的最大生命。</p>
+<ul>
+<li>maxAge &gt; 0：表示Cookie在客户端硬盘上保存的最大时间，单位为秒；</li>
+<li>maxAge &lt; 0：表示Cookie不会被浏览器保存到硬盘上，而只在浏览器内存中存活，一旦客户端关闭浏览器在，那么Cookie就消失；</li>
+<li>maxAge == 0：表示删除Cookie，例如客户端硬盘已经存在名为abc的Cookie，如果服务器再向客户端发送名为abc，并且maxAge为0的Cookie，那么表示删除客户端上的名为abc的Cookie。</li>
+</ul>
+</li>
+<li><p>Cookie的path<br>浏览器在访问BServlet时，是否要带上AServlet保存的Cookie呢？这要看Cookie的path了。<br>现有资源如下：</p>
+<ul>
+<li><a href="http://localhost:8080/day06_2/servlet/AServlet" target="_blank" rel="noopener">http://localhost:8080/day06_2/servlet/AServlet</a></li>
+<li><a href="http://localhost:8080/day06_2/servlet/BServlet，保存名为xxx的Cookie" target="_blank" rel="noopener">http://localhost:8080/day06_2/servlet/BServlet，保存名为xxx的Cookie</a></li>
+<li><a href="http://loclahost:8080/day06_2/servlet/CServlet，保存名为yyy的Cookie" target="_blank" rel="noopener">http://loclahost:8080/day06_2/servlet/CServlet，保存名为yyy的Cookie</a></li>
+<li><a href="http://loclahost:8080/day06_2/servlet/user/DServlet" target="_blank" rel="noopener">http://loclahost:8080/day06_2/servlet/user/DServlet</a>, 保存名为zzz的Cookie</li>
+</ul>
+<p>// 没有设置Cookie的path<br>AServlet {<br>  Cookie c = new Cookie(“xxx”, “XXX”);<br>  response.addCookie(c);<br>}<br>// 设置了Cookie的path为/day06_2<br>CServlet {<br>  Cookie c = new Cookie(“yyy”, “YYY”);<br>  c.setPath=”/day06_2”;<br> response.addCookie(c);<br>}<br>DServlet {<br> Cookie c = new Cookie(“zzz”, “ZZZ”);<br> resposne.addCookie(c);<br>}</p>
+</li>
+</ol>
+<p>  在BServlet中保存的Cookie没有设置path，那么它的path默认为当前BServlet的所在路径，即“/day06_2/servlet”。<br>  在CServlet中保存的Cookie设置了path为/day06_2。<br>  在DServlet中保存的Cookie没有设置path，那么它的path默认为DServlet的所在路径，即“day06_2/servlet/user”</p>
+<p>  当访问AServlet时，是否要带上xxx这个Cookie呢？因为AServlet的访问路径为/day06_2/servlet/BServlet，它包含了xxx的path，即/day06_2/servlet，所以需要带上。</p>
+<p>  当访问AServlet时，是否要带上yyy这个Cookie呢？因为AServlet的访问路径为/day06_2/servlet/BServlet，它包含了xxx的path，即/day06_2，所以需要带上。</p>
+<p>  当访问AServlet时，是否要带上zzz这个Cookie呢？因为AServlet的访问路径为/day06_2/servlet/BServlet，它不包含zzz的path，即/day06_2/servlet/user，所以不会带上。</p>
+<ol start="3">
+<li><p>Cookie的domain<br>Cookie的path是在同一主机中指定共享Cookie，如果主机不同那么就一定不能共享Cookie，无论path是什么。<br>如果希望不同的二级域名中可以共享Cookie，那么就要设置Cookie的domain了。<br>例如：news.baidu.com、tieba.baidu.com、zhidao.baidu.com，它们的域名不同，但百度希望它们之间可以共享Cookie，那么就要设置domain了。</p>
+<p>1). 设置Cookie的path为“/”，例如：cookie.setPath(“/“);<br>2). 设置Cookie的domain，例如：cookie.setDomain(“.baidu.com”)，其中domain中没有指定域名前缀！</p>
+<p>在news.baidu.com主机中的某个项目中保存了Cookie<br>在tieba.baidu.com主机中某个项目中获取Cookie</p>
+<p>当然这需要配置两个虚拟主机才行。</p>
+</li>
+</ol>
+<ol start="4">
+<li><p>Cookie保存中文<br>Cookie的name和value都是不能保存中文的，但可以先把中文转换成URL编码，然后在保存到Cookie的name和value中。<br>String name = “姓名”;<br>String value = “张三”;<br>name = URLEncoder.encode(name, “utf-8”);<br>value = URLEncoder.encode(value, “utf-8”);</p>
+<p>Cookie c = new Cookie(name, value);<br>response.addCookie(c);</p>
+<p>在获取Cookie时，再使用URL解码即可。<br>Cookie[] cs = request.getCookies();<br>if(cs != null) {<br> for(Cookie c : cs) {<br>   String name = URLDecoder.decode(c.getName(), “utf-8”);<br>   String value = URLDecoder.decode(c.getValue(), “utf-8”);<br>   System.out.println(name + “=” + value);<br> }<br>}</p>
+</li>
+</ol>
+<h1 id="-1"><a href="#-1" class="headerlink" title="============================="></a>=============================</h1><p>=============================</p>
+<p>HttpSession</p>
+<p>在JavaWeb中提供了HttpSession类，用来表示http会话。</p>
+<ol>
+<li><p>获取HttpSession<br>HttpSession session = request.getSession();<br>HttpSession session = request.getSession(false);</p>
+</li>
+<li><p>域功能<br>session是域对象，所以有setAttribute()和getAttribute()等方法<br>服务器会为每个会话创建一个session对象，所以session中的数据可供当前会话中所有servlet共享。</p>
+</li>
+<li><p>登录案例<br>请求功能：</p>
+<ol>
+<li>如果登录功能，在session中保存user对象</li>
+<li>访问index1.jsp，查看session中是否存在user对象，如果存在，说明已经登录过。</li>
+<li>访问index2.jsp，查看session中是否存在user对象，如果存在，说明已经登录过。<br>如果关闭了浏览器，那么会话结束，再打开浏览器就开始了一个新会话，那么直接访问index1.jsp或index2.jsp时，session是新的，没有保存user对象，那么表示还没有登录。</li>
+</ol>
+</li>
+<li><p>session的原理<br>session是依赖Cookie实现的。<br>session是服务器端对象<br>当用户第一次使用session时（表示第一次请求服务器），服务器会创建session，并创建一个Cookie，在Cookie中保存了session的id，发送给客户端。这样客户端就有了自己session的id了。但这个Cookie只在浏览器内存中存在，也就是说，在关闭浏览器窗口后，Cookie就会丢失，也就丢失了sessionId。<br>当用户第二次访问服务器时，会在请求中把保存了sessionId的Cookie发送给服务器，服务器通过sessionId查找session对象，然后给使用。也就是说，只要浏览器容器不关闭，无论访问服务器多少次，使用的都是同一个session对象。这样也就可以让多个请求共享同一个session了。<br>当用户关闭了浏览器窗口后，再打开浏览器访问服务器，这时请求中没有了sessionId，那么服务器会创建一个session，再把sessionId通过Cookie保存到浏览器中，也是一个新的会话开始了。原来的session会因为长时间无法访问而失效。<br>当用户打开某个服务器页面长时间没动作时，这样session会超时失效，当用户再有活动时，服务器通过用户提供的sessionId已经找不到session对象了，那么服务器还是会创建一个新的session对象，再把新的sessionId保存到客户端。这也是一个新的会话开始了。</p>
+</li>
+</ol>
+<p>　　设置session超时时间<br>  web.xml文件中配置如下：<br>    <session-config><br>        <session-timeout>30</session-timeout><br>    </session-config></p>
+<ol start="5">
+<li><p>session与浏览器<br>session对象是保存在服务器端的，而sessionId是通过Cookie保存在客户端的。<br>因为Cookie不能在多个浏览器中共享，所以session也不能在多个浏览器中共享。也就是说，使用IE登录后，再使用FireFox访问服务器还是没有登录的状态。</p>
+<p>而且同时打开多个相同浏览器的窗口，是在使用同一session。如果你使用的是老浏览器，例如IE6，那么就会每个窗口一个session。</p>
+</li>
+<li><p>session的API</p>
+<ul>
+<li>String getId()：获取sessionId；</li>
+<li>int getMaxInactiveInterval()：获取session可以的最大不活动时间（秒），默认为30分钟。当session在30分钟内没有使用，那么Tomcat会在session池中移除这个session；</li>
+<li>void setMaxInactiveInterval(int interval)：设置session允许的最大不活动时间（秒），如果设置为1秒，那么只要session在1秒内不被使用，那么session就会被移除；</li>
+<li>long getCreationTime()：返回session的创建时间，返回值为当前时间的毫秒值；</li>
+<li>long getLastAccessedTime()：返回session的最后活动时间，返回值为当前时间的毫秒值；</li>
+<li>void invalidate()：让session失效！调用这个方法会被session失效，当session失效后，客户端再次请求，服务器会给客户端创建一个新的session，并在响应中给客户端新session的sessionId；</li>
+<li>boolean isNew()：查看session是否为新。当客户端第一次请求时，服务器为客户端创建session，但这时服务器还没有响应客户端，也就是还没有把sessionId响应给客户端时，这时session的状态为新。</li>
+</ul>
+</li>
+<li><p>URL重写<br>session依赖Cookie，这是因为服务器需要把sessionId保存到客户端。如果用户的浏览器关闭了Cookie功能，那么session不能使用了！<br>还可以在浏览器关闭了Cookie后使用URL重写的方法保存sessionId，这需要在每个URL后面都加上sessionId！这样用户的请求中就包含了sessionId，服务器就可以通过sessionId找到对应的session对象了。<br>使用response.encodeURL()方法对URL进行编码，这样URL中会智能的添加sessionId。<br>　当浏览器支持cookie时，response.encodeURL()方法不会在URL后追加sessionId<br>当浏览器不支持cookie时，response.encodeURL()方法会在URL后追加sessionId</p>
+</li>
+</ol>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持miaomiao</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2019/09/21/需求调研/计算机网络开学考回忆/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2019/10/21/Java笔记第十章/day11/goods项目/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/categories"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tags"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="https://valeriehu1995.github.io/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
